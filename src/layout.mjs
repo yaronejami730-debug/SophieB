@@ -67,7 +67,7 @@ ${!lp && SITE.announce ? `<div class="announce" data-id="a1"><span>${SITE.announ
 <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mm"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
 </div></header>
 <div class="mmenu" id="mm" role="dialog" aria-modal="true" aria-label="Menu"><button class="close" aria-label="Fermer le menu">×</button>
-${[...NAV, ...NAV_MORE].map(n => `<a href="${n.u}">${n.t}</a>${n.sub ? n.sub.map(x => `<a class="msub" href="${x.u}">${x.t}</a>`).join('') : ''}`).join('')}<p style="margin-top:24px">${book('menu-mobile', 'Réserver un soin')}</p></div>
+${[...NAV, { t: 'Nos partenaires', u: '/nos-partenaires/' }, ...NAV_MORE].map(n => `<a href="${n.u}">${n.t}</a>${n.sub ? n.sub.map(x => `<a class="msub" href="${x.u}">${x.t}</a>`).join('') : ''}`).join('')}<p class="mm-cta">${book('menu-mobile', 'Réserver un soin', 'sm')}</p></div>
 <main id="main"${hasHero ? '' : ' class="pt"'}>
 ${crumbs.length ? `<nav class="wrap crumbs${hasHero ? ' on-hero' : ''}" aria-label="Fil d’Ariane"><a href="/">Accueil</a>${crumbs.map((c, i) => `<span>/</span>${i === crumbs.length - 1 ? `<span aria-current="page" style="margin:0">${c}</span>` : (Array.isArray(c) ? `<a href="${c[1]}">${c[0]}</a>` : c)}`).join('')}</nav>` : ''}
 ${p.body}

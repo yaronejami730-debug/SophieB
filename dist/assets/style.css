@@ -1095,3 +1095,8 @@ a.vlink h3{font:400 1.7rem var(--serif);text-transform:none;letter-spacing:0;mar
 .sub-hero .intro p{margin-left:auto;margin-right:auto;text-align:center;max-width:56ch}
 .sub-hero .intro .eyebrow{justify-content:center}
 .sub-hero{padding-bottom:clamp(28px,4vw,56px)}
+
+/* menu mobile : bouton Réserver discret et élégant */
+.mmenu .mm-cta{margin:28px 0 0;padding-top:24px;border-top:1px solid var(--line)}
+.mmenu .mm-cta .btn{display:inline-flex;width:auto;min-height:40px;padding:0 22px;font:400 .64rem var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold);background:transparent;border:1px solid var(--gold);border-radius:999px}
+.mmenu .mm-cta .btn:hover,.mmenu .mm-cta .btn:active{background:var(--gold);color:#201812}

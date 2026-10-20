@@ -17,7 +17,7 @@ export const SITE = {
   ],
   geo: { lat: 48.8467, lng: 2.3993 }, // [À VÉRIFIER] approximatif, confirmer via Google Maps
   social: { instagram: '[À FOURNIR]', facebook: '[À FOURNIR]', tiktok: '[À FOURNIR]' },
-  announce: '', // texte du bandeau fermable (vide = masqué)
+  announce: 'Site en cours de construction — certaines informations seront bientôt mises à jour.', // texte du bandeau fermable (vide = masqué)
   ga4: '', metaPixel: '' // [À FOURNIR] IDs
 };
 export const PH = '<span class="ph">[À FOURNIR]</span>';
