@@ -1,0 +1,7 @@
+MAQUETTE SOPHIE B — Institut de beauté Paris 12
+
+Ouvrir « index.html » dans un navigateur (double-clic).
+Pages disponibles : Accueil, À propos, Nos partenaires.
+Les autres liens du menu sont volontairement inactifs.
+Les boutons Réserver ouvrent Planity ; une connexion internet est nécessaire pour les polices.
+Les mentions [À FOURNIR] sont des contenus en attente.

@@ -1,0 +1,473 @@
+{
+  "cleanUrls": false,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "19"
+        }
+      ],
+      "destination": "/epilation-laser-paris-12/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "42"
+        }
+      ],
+      "destination": "/soins-visage-paris-12/orlane/#orlane-b21",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "1176"
+        }
+      ],
+      "destination": "/soins-visage-paris-12/orlane/#orlane-b21",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "68"
+        }
+      ],
+      "destination": "/soins-visage-paris-12/hydrastar/#eclat-express",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "40"
+        }
+      ],
+      "destination": "/soins-visage-paris-12/hydrastar/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "1522"
+        }
+      ],
+      "destination": "/soins-visage-paris-12/orlane/#soins-orlane",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "1291"
+        }
+      ],
+      "destination": "/minceur-technologies-paris-12/#radiofrequence",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "1635"
+        }
+      ],
+      "destination": "/soins-visage-paris-12/hydrastar/#soin-expert",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "1303"
+        }
+      ],
+      "destination": "/soins-visage-paris-12/orlane/#anti-imperfections",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "54"
+        }
+      ],
+      "destination": "/minceur-technologies-paris-12/#alpha-lift",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "17"
+        }
+      ],
+      "destination": "/soins-visage-paris-12/hydrastar/#points-noirs",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "1036"
+        }
+      ],
+      "destination": "/massage-paris-12/#sultane-de-saba",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "191"
+        }
+      ],
+      "destination": "/soins-visage-paris-12/la-sultane-de-saba/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "2897"
+        }
+      ],
+      "destination": "/massage-paris-12/#sultane-de-saba",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "1091"
+        }
+      ],
+      "destination": "/massage-paris-12/#formules",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "1935"
+        }
+      ],
+      "destination": "/massage-paris-12/#gommages",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "1097"
+        }
+      ],
+      "destination": "/massage-paris-12/#rituels",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "1101"
+        }
+      ],
+      "destination": "/massage-paris-12/#massages",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "3042"
+        }
+      ],
+      "destination": "/massage-paris-12/#head-spa",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "1099"
+        }
+      ],
+      "destination": "/massage-paris-12/#soins-du-dos",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "2805"
+        }
+      ],
+      "destination": "/massage-paris-12/#mains-pieds",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "1111"
+        }
+      ],
+      "destination": "/minceur-technologies-paris-12/#radiofrequence",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "1117"
+        }
+      ],
+      "destination": "/minceur-technologies-paris-12/#lipocavitation",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "1115"
+        }
+      ],
+      "destination": "/minceur-technologies-paris-12/#electrostimulation",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "3349"
+        }
+      ],
+      "destination": "/minceur-technologies-paris-12/#alpha-lift",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "3307"
+        }
+      ],
+      "destination": "/minceur-technologies-paris-12/#luminotherapie",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "23"
+        }
+      ],
+      "destination": "/minceur-technologies-paris-12/#ems",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "737"
+        }
+      ],
+      "destination": "/regard-maquillage-mariee-paris/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "78"
+        }
+      ],
+      "destination": "/regard-maquillage-mariee-paris/#maquillage",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "1360"
+        }
+      ],
+      "destination": "/regard-maquillage-mariee-paris/#cils-sourcils",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "3468"
+        }
+      ],
+      "destination": "/beaute-mariee-paris/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "2942"
+        }
+      ],
+      "destination": "/jacuzzi-privatif-paris/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "3979"
+        }
+      ],
+      "destination": "/tarifs/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "25"
+        }
+      ],
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "1690"
+        }
+      ],
+      "destination": "/a-propos/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "1586"
+        }
+      ],
+      "destination": "/nos-partenaires/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.sophiebparis.com"
+        }
+      ],
+      "destination": "https://sophiebparis.com/:path*",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+}

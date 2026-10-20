@@ -1,0 +1,128 @@
+{
+ "sophie-b-portrait-institut-paris-12": {
+  "w": 896,
+  "h": 1120,
+  "ws": [
+   640,
+   896
+  ]
+ },
+ "institut-beaute-paris-12-nation": {
+  "w": 1536,
+  "h": 1024,
+  "ws": [
+   640,
+   1200
+  ]
+ },
+ "cabine-epilation-laser-keros-paris-12": {
+  "w": 1042,
+  "h": 945,
+  "ws": [
+   640
+  ]
+ },
+ "cabine-massage-soins-paris-12": {
+  "w": 896,
+  "h": 1120,
+  "ws": [
+   640,
+   896
+  ]
+ },
+ "sophie-epilation-laser-paris-12": {
+  "w": 896,
+  "h": 1120,
+  "ws": [
+   640,
+   896
+  ]
+ },
+ "jacuzzi-privatif-paris-12": {
+  "w": 707,
+  "h": 527,
+  "ws": [
+   640
+  ]
+ },
+ "jacuzzi-balneotherapie-paris-12": {
+  "w": 733,
+  "h": 539,
+  "ws": [
+   640
+  ]
+ },
+ "jacuzzi-ambiance-jungle-orientale-paris": {
+  "w": 887,
+  "h": 944,
+  "ws": [
+   640
+  ]
+ },
+ "rituels-massage-ambiance-spa-paris-12": {
+  "w": 764,
+  "h": 555,
+  "ws": [
+   640
+  ]
+ },
+ "sultane-de-saba-rituels-paris": {
+  "w": 1344,
+  "h": 752,
+  "ws": [
+   640,
+   1344
+  ]
+ },
+ "jacuzzi-privatif-ambiance-paris-12": {
+  "w": 1344,
+  "h": 752,
+  "ws": [
+   640,
+   1200,
+   1344
+  ]
+ },
+ "jacuzzi-bulles-bougies-paris-12": {
+  "w": 1344,
+  "h": 752,
+  "ws": [
+   640,
+   1344
+  ]
+ },
+ "place-de-la-nation-paris-12": {
+  "w": 1344,
+  "h": 752,
+  "ws": [
+   640,
+   1200,
+   1344
+  ]
+ },
+ "facade-institut-sophie-b-paris-12": {
+  "w": 1344,
+  "h": 752,
+  "ws": [
+   640,
+   1200,
+   1344
+  ]
+ },
+ "jacuzzi-gloria-vert": {
+  "w": 1964,
+  "h": 1182,
+  "ws": [
+   800,
+   1400
+  ]
+ },
+ "sophie-massage-dos-cabine-paris-12": {
+  "w": 896,
+  "h": 1120,
+  "ws": [
+   640,
+   896
+  ]
+ }
+}

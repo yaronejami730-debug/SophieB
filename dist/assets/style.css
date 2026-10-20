@@ -1,0 +1,1097 @@
+:root{--ink:#1b1b1b;--soft:#4a4a4a;--mute:#6b675f;--line:#e7e3da;--gold:#B8963E;--paper:#fff;--grey:#F6F4F0;--serif:"Cormorant Garamond",Georgia,serif;--sans:"Jost","Helvetica Neue",Arial,sans-serif;--sec:clamp(48px,5.5vw,84px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.85 var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%;display:block}a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.005em;line-height:1.1;margin:0 0 .55em;font-variant-numeric:lining-nums}
+h1{font-size:clamp(2.6rem,6vw,5.2rem)}h2{font-size:clamp(1.9rem,3.4vw,2.9rem)}h3{font-size:1.5rem}
+p{margin:0 0 1.2em;max-width:54ch;color:var(--soft)}
+.eyebrow{font-size:.7rem;text-transform:uppercase;letter-spacing:.3em;color:var(--mute);font-weight:400;margin:0 0 1.6rem}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+section{padding:var(--sec) 0}.alt{background:var(--grey)}
+.meta{font-size:.82rem;color:var(--mute);margin:0 0 .8em}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:12px 18px;z-index:300}.skip:focus{left:8px;top:8px}
+:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+/* header */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);color:var(--ink);transition:background .4s,border-color .4s,color .4s}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:88px;max-width:1440px;padding:0 40px;transition:height .4s}
+.hdr.solid .wrap{height:68px}
+.hdr.over{background:transparent;border-color:transparent;color:#fff}
+.logo{display:block;width:150px}.logo-img{width:150px;height:auto}
+.nav{display:none;gap:34px;align-items:center}
+.nav a{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:6px 0;border-bottom:1px solid transparent;transition:border-color .3s}
+.nav a:hover,.nav a[aria-current]{border-color:var(--gold)}
+.nav .btn{margin-left:10px}
+.burger{background:none;border:0;width:48px;height:48px;cursor:pointer;color:inherit}
+@media(min-width:1260px){.nav{display:flex}.burger{display:none}}
+@media(max-width:1099px){.hdr .wrap{height:68px;padding:0 20px}.logo,.logo-img{width:118px}}
+.mmenu{position:fixed;inset:0;background:#fff;z-index:200;padding:90px 28px 40px;display:none;overflow:auto}
+.mmenu.open{display:block}.mmenu a{display:block;font:400 2rem var(--serif);padding:10px 0;text-decoration:none;min-height:48px}
+.mmenu .close{position:absolute;top:10px;right:12px;background:none;border:0;font-size:2rem;width:48px;height:48px;cursor:pointer}
+.announce{background:var(--ink);color:#fff;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;text-align:center;padding:10px 44px;position:relative;z-index:101}
+.announce button{position:absolute;right:4px;top:0;height:100%;width:44px;background:none;border:0;color:#fff;font-size:1.3rem;cursor:pointer}
+main.pt{padding-top:88px}
+.crumbs{font-size:.78rem;color:var(--mute);padding:28px 28px 0;max-width:1240px;margin:0 auto}.crumbs a{color:var(--mute)}.crumbs span{margin:0 8px}
+/* boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 36px;background:var(--ink);color:#fff;text-decoration:none;font:400 .72rem var(--sans);letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--ink);border-radius:0;cursor:pointer;transition:background .4s,color .4s,border-color .4s}
+.btn:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink)}.btn.ghost:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.btn.sm{min-height:42px;padding:0 22px;font-size:.66rem}
+.btn.light{background:transparent;color:#fff;border-color:rgba(255,255,255,.8)}.btn.light:hover{background:#fff;color:var(--ink);border-color:#fff}
+.hdr.over .btn{background:transparent;border-color:rgba(255,255,255,.8);color:#fff}.hdr.over .btn:hover{background:#fff;color:var(--ink)}
+.tl{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:6px;display:inline-block}
+/* hero */
+.hero{position:relative;min-height:min(100svh,920px);display:flex;align-items:flex-end;color:#fff;padding:0;background:#222;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(0,0,0,.6),rgba(0,0,0,.15) 65%),linear-gradient(to bottom,rgba(0,0,0,.45),rgba(0,0,0,0) 28%,rgba(0,0,0,.35))}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:0}
+.hero .wrap{position:relative;z-index:2;width:100%;max-width:1440px;padding:0 40px clamp(56px,9vh,110px)}
+.hero h1{color:#fff;max-width:17ch;margin-bottom:.4em}.hero p{color:#fff;font-size:1.08rem;max-width:46ch}
+.hero .eyebrow{color:rgba(255,255,255,.85)}
+.hero .acts{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-top:32px}
+.hero .btn:not(.light){background:#fff;color:var(--ink);border-color:#fff}.hero .btn:not(.light):hover{background:var(--gold);border-color:var(--gold);color:#fff}
+.hero.page{min-height:62vh}.hero.page h1{font-size:clamp(2.4rem,5vw,4.2rem)}
+.band{padding:26px 0;border-bottom:1px solid var(--line)}
+.band ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 44px;justify-content:center;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--soft)}
+/* mise en page */
+.intro{text-align:center;max-width:720px;margin:0 auto}.intro p{margin-inline:auto}
+.feat{display:grid;gap:40px;align-items:center}
+.feat .pic .photo{aspect-ratio:4/5;object-fit:cover}
+.feat .txt{max-width:460px}
+.feat .price{font:400 1.7rem var(--serif);color:var(--ink);margin:0 0 1.6rem}
+@media(min-width:900px){.feat{grid-template-columns:1.1fr 1fr;gap:clamp(60px,9vw,160px)}.feat.rev{grid-template-columns:1fr 1.1fr}.feat.rev .pic{order:2}}
+section.feat-s{padding:clamp(32px,4vw,64px) 0}
+.grid{display:grid;gap:clamp(32px,4vw,64px)}.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))}.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}.g4{grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+.card{background:transparent;border:0;border-top:1px solid var(--line);padding:28px 0 0}
+.card h3{font-size:1.6rem}
+.card .price,.price{font:400 1.5rem var(--serif);color:var(--ink)}
+.photo{width:100%;height:auto;object-fit:cover;background:var(--grey);border-radius:0}
+.portrait{aspect-ratio:4/5;object-position:50% 20%}
+.frame{position:relative;padding:0 0 32px 32px}.frame::before{content:"";position:absolute;left:0;bottom:0;width:80%;height:80%;background:var(--grey)}.frame .photo{position:relative}
+.gallery{gap:6px}.gallery .photo{aspect-ratio:1/1}
+.ph{background:#fff3c4;color:#6b5200;padding:0 6px;font-size:.85em;white-space:nowrap}
+.ph-img{aspect-ratio:4/3;background:var(--grey);display:flex;align-items:flex-end;padding:14px;font-size:.78rem;color:var(--mute)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;text-align:center;font-size:.85rem;color:var(--soft)}
+.stats b{display:block;font:400 2.2rem var(--serif);color:var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:.95rem}th,td{text-align:left;padding:16px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:400;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mute)}
+.tscroll{overflow-x:auto}
+.steps{counter-reset:s;list-style:none;padding:0;display:grid;gap:36px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.steps li{counter-increment:s;border-top:1px solid var(--line);padding-top:20px}
+.steps li::before{content:"0" counter(s);font:400 2rem var(--serif);color:var(--gold);display:block}
+details{border-bottom:1px solid var(--line)}summary{cursor:pointer;list-style:none;padding:24px 44px 24px 0;font:400 1.35rem var(--serif);position:relative;min-height:48px}
+summary::-webkit-details-marker{display:none}summary::after{content:"+";position:absolute;right:6px;top:20px;font-size:1.6rem;font-family:var(--sans);font-weight:300}
+details[open] summary::after{content:"–"}details>div{padding:0 0 22px}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:20px}
+label{font-size:.82rem;color:var(--soft)}
+input,select,textarea{font:inherit;min-height:50px;padding:10px 14px;border:1px solid var(--line);border-radius:0;background:#fff;color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--ink);outline:0}
+input[type=range]{padding:0}.hp{position:absolute;left:-9999px}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px}
+.chip{min-height:44px;padding:0 20px;border:1px solid var(--line);background:#fff;border-radius:0;cursor:pointer;font:400 .72rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.plist{list-style:none;margin:0 0 22px;padding:0}.plist li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line)}.plist em{font-style:normal;color:var(--mute);font-size:.85em;margin-left:6px}.plist b{font:400 1.2rem var(--serif);white-space:nowrap}
+.jungle-sec{background:#111;color:#eee}.jungle-sec p{color:#ccc}.jungle-sec h2,.jungle-sec h3,.jungle-sec .price{color:#fff}.jungle-sec .card{border-color:#333}.jungle-sec .eyebrow{color:#aaa}
+.jungle-sec .btn{background:transparent;border-color:#fff;color:#fff}.jungle-sec .btn:hover{background:var(--gold);border-color:var(--gold)}
+.cta-final{text-align:center;background:var(--grey)}.cta-final p{margin-inline:auto}.cta-final h2{max-width:20ch;margin-inline:auto}
+.open-now{display:inline-flex;gap:8px;align-items:center;font-size:.9rem}.open-now::before{content:"";width:8px;height:8px;border-radius:50%;background:#bbb}
+.open-now.on::before{background:var(--gold)}.open-now.off::before{background:#222}
+.ftr{background:#fff;border-top:1px solid var(--line);padding:90px 0 130px;font-size:.92rem;color:var(--soft)}
+.ftr h3{font:400 .7rem var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--mute);margin-bottom:1.2em}
+.ftr a{color:var(--ink)}.ftr .meta{color:var(--mute)}.ftr label{color:var(--soft)}
+.ftr .chip{min-height:40px;font-size:.66rem}
+.mbar{position:fixed;bottom:0;left:0;right:0;z-index:90;display:grid;grid-template-columns:2fr 1fr 1fr;background:#fff;border-top:1px solid var(--line)}
+.mbar a{min-height:56px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase}
+.mbar a:first-child{background:var(--ink);color:#fff}
+@media(min-width:1100px){.mbar{display:none}.ftr{padding-bottom:90px}}
+.totop{position:fixed;right:16px;bottom:76px;width:48px;height:48px;border:1px solid var(--line);background:#fff;cursor:pointer;display:none;z-index:80}.totop.on{display:block}
+.cookie{position:fixed;left:12px;right:12px;bottom:76px;max-width:520px;background:#fff;border:1px solid var(--line);padding:22px;z-index:150;display:none;box-shadow:0 10px 40px rgba(0,0,0,.08)}
+.cookie.on{display:block}.cookie p{font-size:.9rem}.cookie .acts{display:flex;gap:12px;flex-wrap:wrap}.cookie .btn{flex:1;padding:0 12px}
+@media(min-width:1100px){.cookie{bottom:24px;left:24px;right:auto}}
+.quote{font-family:var(--serif);font-size:1.4rem}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+.lp .nav,.lp .burger,.lp .mbar{display:none}
+@media print{.hdr,.ftr,.mbar,.cookie,.announce,.totop,.noprint{display:none!important}body{font-size:11pt}details{display:block}details>div{display:block}section{padding:20px 0}main.pt{padding-top:0}}
+.hero .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero.page{min-height:min(62vh,640px)}
+main{position:relative}
+.crumbs.on-hero{position:absolute;top:100px;left:0;right:0;z-index:5;padding:0 40px;max-width:1440px;color:rgba(255,255,255,.85)}
+.crumbs.on-hero a{color:#fff}
+@media(max-width:1099px){.crumbs.on-hero{top:84px;padding:0 20px}}
+
+/* palace : header symétrique + carte hero */
+em{font-style:italic}
+@media(min-width:1100px){.hdr .wrap{display:grid;grid-template-columns:1fr auto 1fr}.nav.l{justify-self:start}.nav.r{justify-self:end}.logo,.logo-img{width:170px}}
+.hero-card{display:none}
+@media(min-width:1000px){.hero-card{display:block;position:absolute;right:40px;bottom:56px;z-index:3;background:#fff;color:var(--ink);padding:30px 32px;width:min(420px,32vw)}
+.hero-card p{font:400 1.45rem var(--serif);color:var(--ink);margin:0 0 20px}
+.hero-card .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.hero-card a{border:1px solid var(--line);text-align:center;padding:16px 4px;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:background .4s,color .4s,border-color .4s}
+.hero-card a:hover{background:var(--ink);color:#fff;border-color:var(--ink)}}
+.intro h2 em{color:var(--ink)}
+.band{padding:22px 0}
+.cta-final{padding:var(--sec) 0}
+
+.brands{text-align:center}.brands p{margin-inline:auto}.brand-logo{height:auto;margin:0 auto 22px;opacity:.92}.brands .brand-logo{margin-bottom:16px}section .wrap>.brand-logo{margin:0 0 24px}
+/* équilibre photo / texte */
+.feat .pic .photo{aspect-ratio:4/3;max-height:420px;width:100%}
+.feat .txt{max-width:440px}
+@media(min-width:900px){.feat,.feat.rev{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(48px,7vw,110px)}.feat .pic{max-width:560px}.feat.rev .pic{justify-self:end}}
+.portrait{aspect-ratio:1/1;max-height:480px}
+.frame{max-width:520px}
+.gallery .photo{aspect-ratio:4/3}
+.hero.page h1{font-size:clamp(2.2rem,4.4vw,3.6rem)}
+.frame .portrait{aspect-ratio:4/3;max-height:400px;object-position:50% 30%}
+.frame{max-width:480px}
+
+.brand-row{display:flex;gap:clamp(36px,7vw,96px);justify-content:center;align-items:center;flex-wrap:wrap;margin-bottom:20px}.brand-row .brand-logo{margin:0}
+.brand-logo{opacity:1!important}.brands .meta{max-width:none}
+
+.partners{padding:44px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.partners .wrap{text-align:center}.partners .eyebrow{margin:0 0 26px}
+.partners .brand-row{gap:clamp(32px,6vw,80px);margin:0}
+.partners .brand-logo{height:auto;filter:brightness(0);margin:0}
+.brand-txt{font:400 1.25rem var(--serif);letter-spacing:.32em;text-transform:uppercase;color:#111}
+.partners .eyebrow{margin-inline:auto;max-width:none}
+img[src*="sophie-epilation-laser"]{object-position:50% 22%}
+.feat .pic img[src*="sophie-epilation-laser"]{object-position:50% 14%}
+
+/* hero en deux colonnes */
+.hsplit{display:grid;grid-template-columns:1fr;background:#fff}
+.hsplit .htxt{padding:clamp(40px,6vw,80px) 28px;display:flex;flex-direction:column;justify-content:center}
+.hsplit h1{font-size:clamp(2.2rem,4.2vw,3.6rem);max-width:14ch}
+.hsplit .hpic .photo{width:100%;height:100%;max-height:78vh;object-fit:cover;object-position:50% 20%}
+@media(min-width:900px){.hsplit{grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:min(82vh,760px)}.hsplit .htxt{padding:60px clamp(40px,7vw,120px) 60px 40px}.hsplit .hpic .photo{max-height:none}}
+main.pt .hsplit{margin-top:-0px}
+section.hsplit{padding:0}
+
+/* rythme resserré */
+section.feat-s{padding:clamp(20px,2.6vw,36px) 0}
+.band + section{padding:clamp(48px,5vw,72px) 0 clamp(8px,1.5vw,20px)}
+.intro p{margin-bottom:0}
+h2{margin-bottom:.45em}.eyebrow{margin-bottom:1.1rem}
+.partners{padding:32px 0}.partners .eyebrow{margin-bottom:20px}
+.cta-final{padding:clamp(56px,6vw,88px) 0}
+.ftr{padding-top:56px}
+/* photos en hauteur */
+.feat .pic .photo{aspect-ratio:4/5;max-height:none;width:100%}
+@media(min-width:900px){.feat .pic{max-width:440px}.feat.rev .pic{justify-self:end}.feat:not(.rev) .pic{justify-self:end}}
+.feat .pic img[src*="sophie-epilation-laser"]{object-position:50% 50%}
+.hsplit .acts{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+
+/* page histoire */
+.story{max-width:720px;margin:0 auto;text-align:center}.story p{margin-inline:auto}.story .eyebrow{display:block}
+.pull{font:400 clamp(1.5rem,2.6vw,2.15rem)/1.4 var(--serif)!important;color:var(--ink)!important;max-width:30ch!important;margin:1.2em auto 1.4em!important}
+.band-img{width:100%}.band-img .photo{width:100%;height:clamp(240px,42vh,460px);aspect-ratio:auto;object-fit:cover;object-position:50% 60%}
+.names{font:400 .78rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--ink)!important;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;max-width:none!important}
+.words{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));max-width:900px;margin:56px auto 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.words span{padding:26px 8px;text-align:center;font:400 .72rem var(--sans);letter-spacing:.3em;text-transform:uppercase}
+.spa .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}.spa .pair .photo{aspect-ratio:3/4;height:100%}
+.spa h2 em{color:#fff}.spa .btn{margin-top:8px}
+.sig{margin:36px auto 0;width:220px;height:auto}
+.hsplit .face{object-position:50% 30%}
+.alt .words{border-color:#d9d4c8}
+.cta-final .btn,.cta-final .btn.light{background:var(--ink);border-color:var(--ink);color:#fff}.cta-final .btn:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+img[src*="jacuzzi-privatif-ambiance"]{object-position:40% 50%}.hero.jungle.page{min-height:min(78vh,720px)}
+.hero.page h1{max-width:26ch}
+.feat .pic img[src*="jacuzzi-bulles-bougies"]{object-position:35% 50%}
+
+/* variante large : photo paysage entière */
+.feat.wide .pic .photo{aspect-ratio:16/9;max-height:none;object-position:50% 50%}
+@media(min-width:900px){.feat.wide{grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:clamp(40px,5vw,80px)}.feat.wide .pic{max-width:none;justify-self:stretch}}
+/* fondu haut / bas des photos */
+.feat .pic .photo,.band-img .photo{-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 6%,#000 94%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 6%,#000 94%,transparent 100%)}
+.alt .feat .pic .photo{background:transparent}
+.hero + section.intro-s,.hero + section{padding-top:clamp(56px,6vw,88px);padding-bottom:clamp(8px,1.5vw,20px)}
+.hero + section.partners{padding:34px 0}.partners + section{padding-top:clamp(56px,6vw,88px);padding-bottom:clamp(8px,1.5vw,20px)}
+
+/* hero vidéo : ralenti, transparence légère, fondu vers la section suivante */
+.hero.vid{background:#0b0b0b}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.78}
+.hero.vid::before{content:"";position:absolute;left:0;right:0;bottom:0;height:38%;z-index:1;background:linear-gradient(to bottom,rgba(17,17,17,0),#111)}
+.hero.vid .wrap{z-index:2}
+@media(prefers-reduced-motion:reduce){.hero-video{display:none}.hero.vid{background:#0b0b0b url(/assets/video/jacuzzi-ambiance-poster.webp) center/cover}}
+
+/* section formules (fond noir) : couleurs du site */
+.jungle-sec .eyebrow{color:#bdb7a8}
+.jungle-sec .ph{background:transparent;color:var(--gold);border:1px dashed rgba(184,150,62,.7);padding:2px 10px;font-size:.8em}
+.jungle-sec .price .ph{font-size:.9rem}
+.formulas{gap:20px}
+.formulas .card{border:1px solid rgba(184,150,62,.35);padding:30px 24px;display:flex;flex-direction:column;gap:14px;background:rgba(255,255,255,.02)}
+.formulas .card h3{font:400 1.7rem var(--serif);letter-spacing:0;text-transform:none;margin:0;color:#fff}
+.formulas .card .price{margin:0}
+.formulas .card .btn{align-self:flex-start;margin-top:auto}
+.jungle-sec .btn{border-color:rgba(255,255,255,.7);color:#fff}
+.jungle-sec>.wrap>p{max-width:60ch;margin-top:28px}
+.formulas .card h3,.price,.plist b{font-variant-numeric:lining-nums}
+.jungle-sec>.wrap>p{margin-top:36px}
+/* version claire : plus de grands aplats noirs */
+.jungle-sec{background:var(--grey);color:var(--ink)}
+.jungle-sec p{color:var(--soft)}
+.jungle-sec h2,.jungle-sec h3,.jungle-sec .price,.spa h2 em{color:var(--ink)}
+.jungle-sec .eyebrow{color:var(--mute)}
+.jungle-sec .card{border-color:var(--line)}
+.jungle-sec .btn{background:var(--ink);border-color:var(--ink);color:#fff}
+.jungle-sec .btn:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+.jungle-sec .ph{background:#fff3c4;color:#6b5200;border:0;padding:0 6px}
+.formulas .card{background:#fff;border:1px solid var(--line)}
+.formulas .card h3{color:var(--ink)}
+.formulas .card .btn{background:transparent;color:var(--ink);border-color:var(--ink)}
+.formulas .card .btn:hover{background:var(--ink);color:#fff}
+.hero.vid{background:#3a2f22}
+.hero-video{opacity:.92}
+.hero.vid::before{background:linear-gradient(to bottom,rgba(246,244,240,0),var(--grey));height:26%}
+.hero.vid::after{background:linear-gradient(90deg,rgba(0,0,0,.5),rgba(0,0,0,.05) 65%),linear-gradient(to bottom,rgba(0,0,0,.35),rgba(0,0,0,0) 30%)}
+/* transition continue : la vidéo se fond dans la section suivante */
+.hero.vid{min-height:min(88vh,820px);margin-bottom:0}
+.hero.vid::before{height:55%;background:linear-gradient(to bottom,rgba(246,244,240,0) 0%,rgba(246,244,240,.55) 55%,var(--grey) 100%)}
+.hero.vid + section{position:relative;z-index:3;margin-top:-120px;padding-top:clamp(130px,12vw,170px);background:linear-gradient(to bottom,rgba(246,244,240,0) 0,var(--grey) 150px)}
+.hero.vid .wrap{padding-bottom:clamp(120px,18vh,200px)}
+
+.checks{list-style:none;margin:0;padding:0}.checks li{padding:12px 0 12px 28px;border-bottom:1px solid var(--line);position:relative;color:var(--soft)}.checks li::before{content:"";position:absolute;left:0;top:22px;width:12px;border-top:1px solid var(--gold)}
+.hero.vid + section .intro h2{margin-bottom:.4em}
+
+/* ===== thème chaud (page jacuzzi) : chocolat & or ===== */
+.warm{--ink:#f0e7d6;--soft:#d6cab4;--mute:#ab9f88;--line:rgba(184,150,62,.38);--paper:#201812;--grey:#2a2018;background:var(--paper);color:var(--ink)}
+.warm .hdr{background:rgba(32,24,18,.96);color:var(--ink);border-color:rgba(184,150,62,.28)}
+.warm .hdr.over{background:transparent;border-color:transparent}
+.warm .btn,.warm .btn.ghost,.warm .jungle-sec .btn,.warm .cta-final .btn,.warm .cta-final .btn.light,.warm .formulas .card .btn,.warm .hero .btn:not(.light){background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.warm .btn:hover,.warm .jungle-sec .btn:hover,.warm .cta-final .btn:hover,.warm .formulas .card .btn:hover,.warm .hero .btn:not(.light):hover{background:var(--gold);color:#201812;border-color:var(--gold)}
+.warm .hdr .btn{color:#fff;border-color:rgba(255,255,255,.7)}.warm .hdr .btn:hover{background:var(--gold);border-color:var(--gold);color:#201812}
+.warm .hero.vid::before{background:linear-gradient(to bottom,rgba(32,24,18,0),rgba(32,24,18,.6) 55%,#201812 100%)}
+.warm .hero.vid + section{background:linear-gradient(to bottom,rgba(32,24,18,0) 0,#201812 150px)}
+.warm h1,.warm h2,.warm h3{color:var(--ink)}.warm h2 em,.warm .intro h2 em{color:var(--gold)}
+.warm .eyebrow{color:var(--gold)}
+.warm .alt{background:var(--grey)}
+.warm .stats b{color:var(--gold);font-size:2.8rem}
+.warm .card,.warm .formulas .card{background:rgba(255,255,255,.025);border:1px solid var(--line)}
+.warm .ph{background:rgba(184,150,62,.18);color:#e8cf8a}
+.warm input,.warm select,.warm textarea{background:#241b12;color:var(--ink);border-color:var(--line)}
+.warm summary,.warm details{border-color:var(--line)}
+.warm .cta-final{background:var(--grey)}
+.warm .ftr{background:#201812;border-color:var(--line);color:var(--soft)}.warm .ftr a{color:var(--ink)}
+.warm .mbar{background:#201812;border-color:var(--line)}.warm .mbar a:first-child{background:var(--gold);color:#201812}
+.warm .cookie{background:#2a2018;color:var(--ink);border-color:var(--line)}
+.warm .totop{background:#2a2018;color:var(--ink);border-color:var(--line)}
+.warm .crumbs,.warm .crumbs a{color:rgba(255,255,255,.8)}
+.warm .checks li{color:var(--soft)}
+.warm .pull{color:var(--ink)!important}
+.warm .photo{background:#2a2018}
+/* sections immersives : photo pleine largeur + texte */
+.imm{position:relative;padding:0;min-height:min(80vh,700px);display:flex;align-items:center;overflow:hidden}
+.imm-bg,.imm-bg .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;-webkit-mask-image:none;mask-image:none}
+.imm::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,#201812 0,rgba(32,24,18,0) 22%,rgba(32,24,18,0) 78%,#201812 100%)}
+.imm.l::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(32,24,18,.88) 0,rgba(32,24,18,.55) 45%,rgba(32,24,18,0) 75%)}
+.imm.r::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(270deg,rgba(32,24,18,.88) 0,rgba(32,24,18,.55) 45%,rgba(32,24,18,0) 75%)}
+.imm .wrap{position:relative;z-index:2;width:100%;max-width:1240px}
+.imm-txt{max-width:480px;padding:72px 0}.imm.r .imm-txt{margin-left:auto}
+.imm-txt p{color:var(--soft)}.imm-txt h2{color:var(--ink)}
+@media(max-width:899px){.imm{min-height:560px}.imm.l::after,.imm.r::after{background:linear-gradient(to bottom,rgba(32,24,18,.7),rgba(32,24,18,.82))}.imm-txt{max-width:none}}
+/* grille 2x2 et colonnes */
+.quad{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:40px;max-width:1000px;margin:56px auto 0}
+.quad>div{border-top:1px solid var(--gold);padding-top:22px}.quad span{font:400 1.6rem var(--serif);color:var(--gold);display:block;margin-bottom:10px}
+.cols2{columns:2 320px;column-gap:56px;max-width:960px;margin:0 auto}.cols2 p{max-width:none;break-inside:avoid}
+.frame2 .photo{aspect-ratio:1/1;max-height:520px}
+@media(min-width:700px){.quad{grid-template-columns:repeat(2,1fr);gap:48px 64px}}
+.imm.r::after{background:linear-gradient(270deg,rgba(32,24,18,.95) 0,rgba(32,24,18,.82) 50%,rgba(32,24,18,.1) 82%)}
+.imm.r .imm-txt p,.imm.l .imm-txt p{color:#e6dcc8}
+
+/* accueil en thème chaud */
+.warm .hero-card{background:rgba(32,23,16,.94);border:1px solid var(--line);color:var(--ink)}
+.warm .hero-card p{color:var(--ink)}
+.warm .hero-card a{border-color:var(--line);color:var(--ink)}.warm .hero-card a:hover{background:var(--gold);border-color:var(--gold);color:#201812}
+.warm .partners{border-color:var(--line)}
+.warm .partners .brand-logo{filter:brightness(0) invert(1);opacity:.92}.warm .brand-txt{color:var(--ink)}
+.imm-txt .price{font:400 1.7rem var(--serif);color:var(--ink);margin:0 0 1.4rem}
+.imm-txt .meta{color:var(--mute)}
+.warm .tl{color:var(--ink)}
+.warm .frame::before{background:#2a1f14}
+.warm .hsplit{background:var(--paper)}.warm .hsplit h1{color:var(--ink)}
+
+/* thème chaud sur tout le site : compléments */
+.warm .chip{background:transparent;color:var(--ink);border-color:var(--line)}
+.warm .chip[aria-pressed=true]{background:var(--gold);color:#201812;border-color:var(--gold)}
+.warm .mmenu{background:#201812}.warm .mmenu .close{color:var(--ink)}
+.warm .words{border-color:var(--line)}.warm .alt .words{border-color:var(--line)}
+.warm .tscroll{color:var(--ink)}
+.warm table{color:var(--ink)}
+.warm th{color:var(--mute)}
+.warm .ph-img{background:#241b12;color:var(--mute)}
+.warm .field label,.warm label{color:var(--soft)}
+.warm ::placeholder{color:var(--mute)}
+.warm .skip{background:var(--gold);color:#201812}
+.warm .open-now.off::before{background:#7a6a50}
+.warm .btn.sm{background:transparent}
+.warm .nav a:hover,.warm .nav a[aria-current]{border-color:var(--gold)}
+.warm .hsplit .htxt{background:var(--paper)}
+.warm .band-img .photo{background:#2a2018}
+.warm .hero.page .btn,.warm .hsplit .btn{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.warm .hsplit .btn:hover{background:var(--gold);color:#201812}
+.warm .hsplit .btn.ghost{color:var(--ink);border-color:var(--ink)}
+.warm .hsplit .btn.ghost:hover{background:var(--ink);color:#201812}
+.warm .crumbs{color:var(--mute)}.warm .crumbs a{color:var(--mute)}
+.warm .hero .crumbs.on-hero,.warm .crumbs.on-hero a{color:rgba(255,255,255,.85)}
+/* cartes : colonnes à filet doré, sans cadre qui colle au texte */
+.warm .card,.warm .alt .card{background:transparent;border:0;border-top:1px solid var(--gold);padding:28px 0 0}
+.warm .formulas .card{background:rgba(255,255,255,.03);border:1px solid var(--line);padding:30px 24px}
+.warm .soin.card{background:rgba(255,255,255,.03);border:1px solid var(--line);padding:30px 28px}
+.warm .jungle-sec .card{border:0;border-top:1px solid var(--gold)}
+
+.imm-bg img[src*="sophie-epilation-laser"]{object-position:50% 16%}
+.imm-bg img[src*="cabine-massage-soins"]{object-position:50% 38%}
+.imm{min-height:min(88vh,800px)}
+.imm-bg img[src*="sophie-epilation-laser"]{object-position:50% 22%}
+@media(max-width:899px){.imm{min-height:620px}.imm-bg img[src*="sophie-epilation-laser"]{object-position:50% 18%}}
+.partners + section.imm{padding:0}.warm .partners{background:#201812;position:relative;z-index:3;padding:40px 0}
+/* bande partenaires : dégradé haut et bas dans les photos voisines */
+.warm .partners{border:0;margin:-56px 0;padding:92px 0;background:linear-gradient(to bottom,rgba(32,24,18,0) 0,#201812 34%,#201812 66%,rgba(32,24,18,0) 100%);pointer-events:none}
+.warm .partners a,.warm .partners .wrap{pointer-events:auto}
+.warm .partners{margin:-56px 0 -110px;padding:92px 0 160px;background:linear-gradient(to bottom,rgba(32,24,18,0) 0,#201812 24%,#201812 44%,rgba(32,24,18,.7) 66%,rgba(32,24,18,0) 100%)}
+/* hero : fondu bas vers la section suivante */
+.warm .hero::before{content:"";position:absolute;left:0;right:0;bottom:0;height:38%;z-index:1;pointer-events:none;background:linear-gradient(to bottom,rgba(32,24,18,0),rgba(32,24,18,.55) 55%,#201812 100%)}
+.warm .hero.vid::before{height:55%}
+.hero-card{z-index:4}
+.partners .brand-logo[src*="sultane"]{width:200px;height:auto}
+.partners .brand-logo[src*="orlane"]{width:150px;height:auto}
+.brand-txt{font-size:1.5rem}
+.partners .brand-row{gap:clamp(36px,7vw,100px)}
+.warm .hero::before{z-index:2;background:linear-gradient(to bottom,rgba(32,24,18,0),rgba(32,24,18,.6) 50%,#201812 100%)}
+.warm .hero.vid::before{background:linear-gradient(to bottom,rgba(32,24,18,0),rgba(32,24,18,.6) 55%,#201812 100%)}
+.warm .hero .wrap{z-index:3}
+.intro{text-align:center;max-width:780px}.intro p{margin-left:auto;margin-right:auto;text-align:center;max-width:62ch}.intro p+p{margin-top:1.1em}
+.intro p+p{margin-top:0}.intro p{max-width:52ch}
+.imm-bg img[src*="place-de-la-nation"]{object-position:50% 45%}.imm .open-now{color:#e6dcc8}
+.imm-logo{width:220px;height:auto;filter:brightness(0) invert(1);margin:0 0 28px!important;opacity:.95}.imm.r .imm-logo{margin-left:0}
+.imm.r .imm-logo{margin-left:auto!important;margin-right:0}.imm.r .imm-txt{text-align:left}
+.imm{position:relative}
+.imm .imm-logo{position:absolute;top:clamp(36px,6vw,72px);left:max(28px,calc((100vw - 1240px)/2 + 28px));margin:0!important;z-index:3;width:220px}
+.imm.r .imm-logo{margin:0!important}
+@media(max-width:899px){.imm .imm-logo{width:170px;left:20px;top:28px}}
+/* photos en hauteur : dézoom, image entière, fondu sur les côtés */
+.imm{background:#201812}
+.imm-bg img[src*="sophie-epilation-laser"],.imm-bg img[src*="cabine-massage-soins"]{width:auto;height:100%;max-width:none;object-fit:contain;object-position:center;left:auto;right:max(5%,calc((100vw - 1240px)/2));-webkit-mask-image:linear-gradient(to right,transparent 0,#000 18%,#000 82%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 8%,#000 92%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0,#000 18%,#000 82%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 8%,#000 92%,transparent 100%);mask-composite:intersect}
+.imm-bg img[src*="cabine-massage-soins"]{right:auto;left:max(5%,calc((100vw - 1240px)/2))}
+.imm.l:has(img[src*="sophie-epilation-laser"])::after,.imm.r:has(img[src*="cabine-massage-soins"])::after{display:none}
+@media(max-width:899px){.imm-bg img[src*="sophie-epilation-laser"],.imm-bg img[src*="cabine-massage-soins"]{width:100%;height:100%;object-fit:cover;right:0;left:0}.imm.l:has(img[src*="sophie-epilation-laser"])::after,.imm.r:has(img[src*="cabine-massage-soins"])::after{display:block}}
+/* fond pleine hauteur, légèrement dézoomé : image plus étroite que l'écran, collée au bord, fondu côté texte */
+.imm:has(img[src*="sophie-epilation-laser"]),.imm:has(img[src*="cabine-massage-soins"]){min-height:min(96vh,900px)}
+.imm-bg img[src*="sophie-epilation-laser"],.imm-bg img[src*="cabine-massage-soins"]{width:72%;height:100%;object-fit:cover;object-position:50% 20%;left:auto;right:0;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 38%,#000 100%),linear-gradient(to bottom,transparent 0,#000 12%,#000 88%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0,#000 38%,#000 100%),linear-gradient(to bottom,transparent 0,#000 12%,#000 88%,transparent 100%);mask-composite:intersect}
+.imm-bg img[src*="cabine-massage-soins"]{left:0;right:auto;object-position:50% 35%;-webkit-mask-image:linear-gradient(to left,transparent 0,#000 38%,#000 100%),linear-gradient(to bottom,transparent 0,#000 12%,#000 88%,transparent 100%);mask-image:linear-gradient(to left,transparent 0,#000 38%,#000 100%),linear-gradient(to bottom,transparent 0,#000 12%,#000 88%,transparent 100%)}
+@media(max-width:899px){.imm-bg img[src*="sophie-epilation-laser"],.imm-bg img[src*="cabine-massage-soins"]{width:100%;left:0;right:0}}
+.partners .brand-logo[src*="orlane"]{width:200px}
+.partners .brand-logo[src*="sultane"]{width:270px}
+.brand-txt{font-size:2rem;letter-spacing:.36em}
+.partners .eyebrow{font-size:.8rem;margin-bottom:30px}
+.partners .brand-row{gap:clamp(40px,8vw,120px)}
+@media(max-width:700px){.partners .brand-logo[src*="orlane"]{width:150px}.partners .brand-logo[src*="sultane"]{width:200px}.brand-txt{font-size:1.5rem}}
+/* lisibilité du hero */
+.warm .hero::after{background:linear-gradient(90deg,rgba(17,12,8,.88) 0,rgba(17,12,8,.72) 38%,rgba(17,12,8,.25) 70%,rgba(17,12,8,.1) 100%),linear-gradient(to bottom,rgba(17,12,8,.55),rgba(17,12,8,0) 28%)}
+.hero .eyebrow{color:#f0e7d6!important;text-shadow:0 1px 12px rgba(0,0,0,.6)}
+.hero h1{text-shadow:0 2px 24px rgba(0,0,0,.55);font-size:clamp(2.2rem,4.4vw,3.8rem);max-width:19ch}
+.hero p{color:#f4ecdc;text-shadow:0 1px 14px rgba(0,0,0,.6);max-width:44ch}
+.hero .btn,.warm .hero .btn:not(.light){background:rgba(17,12,8,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#e9c97a;border-color:#c9a24a}
+.hero .eyebrow::before{background:none}
+
+.orlane-b21{padding:clamp(72px,9vw,130px) 0}
+.orlane-b21 .grid{align-items:center;gap:clamp(40px,7vw,110px)}
+.orlane-b21 .seal img{width:100%;max-width:460px;height:auto;margin:0 auto;opacity:.95}
+.orlane-b21 strong{font-weight:500;color:var(--ink)}
+.orlane-b21 p{color:var(--soft)}
+@media(min-width:900px){.orlane-b21 .grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}}
+/* lisibilité : photo plus étroite, zone de texte sur fond sombre uni */
+@media(min-width:900px){
+.imm-bg img[src*="sophie-epilation-laser"],.imm-bg img[src*="cabine-massage-soins"]{width:58%}
+.imm.l:has(img[src*="sophie-epilation-laser"])::after{display:block;background:linear-gradient(90deg,#201812 0,#201812 36%,rgba(32,24,18,.0) 52%)}
+.imm.r:has(img[src*="cabine-massage-soins"])::after{display:block;background:linear-gradient(270deg,#201812 0,#201812 36%,rgba(32,24,18,.0) 52%)}
+.imm.r:has(img[src*="cabine-massage-soins"]) .imm-txt{margin-left:auto;max-width:440px}
+.imm.l:has(img[src*="sophie-epilation-laser"]) .imm-txt{max-width:440px}
+}
+.imm-txt p,.imm-txt .meta{color:#efe6d3}
+.imm-txt .meta{opacity:.8}
+/* menu : une seule ligne, plus compact */
+.nav a{white-space:nowrap}
+@media(min-width:1100px){.hdr .wrap{padding:0 28px}.nav{gap:22px}.nav a{font-size:.68rem;letter-spacing:.14em}.nav .btn{padding:0 20px;margin-left:4px}.hdr .wrap{grid-template-columns:1fr 170px 1fr}}
+@media(min-width:1100px) and (max-width:1320px){.nav{gap:16px}.nav a{font-size:.64rem;letter-spacing:.1em}}
+@media(min-width:1100px) and (max-width:1320px){.hdr .wrap{grid-template-columns:1fr 130px 1fr;gap:20px}.logo,.logo-img{width:130px}.nav{gap:13px}.nav a{font-size:.6rem;letter-spacing:.08em}.nav .btn{padding:0 14px}}
+.hsplit .face{object-position:50% 22%}
+/* hero en deux colonnes : photo fondue dans le fond */
+.hsplit{position:relative;background:var(--paper);overflow:hidden}
+@media(min-width:900px){
+.hsplit{min-height:min(92vh,860px)}
+.hsplit .hpic{position:relative}
+.hsplit .hpic .photo{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:cover;object-position:50% 18%;
+-webkit-mask-image:linear-gradient(to right,transparent 0,rgba(0,0,0,.55) 14%,#000 34%),linear-gradient(to bottom,transparent 0,#000 14%,#000 72%,transparent 100%);-webkit-mask-composite:source-in;
+mask-image:linear-gradient(to right,transparent 0,rgba(0,0,0,.55) 14%,#000 34%),linear-gradient(to bottom,transparent 0,#000 14%,#000 72%,transparent 100%);mask-composite:intersect}
+.hsplit .hpic::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22%;background:linear-gradient(to bottom,rgba(32,24,18,0),var(--paper));pointer-events:none}
+}
+@media(max-width:899px){.hsplit .hpic .photo{-webkit-mask-image:linear-gradient(to bottom,#000 70%,transparent 100%);mask-image:linear-gradient(to bottom,#000 70%,transparent 100%)}}
+
+.hsplit .htxt h1 em{color:var(--gold)}
+.hsplit .hsub{font:400 clamp(1.3rem,2vw,1.7rem) var(--serif);margin:.2em 0 .8em;color:var(--ink)}
+.hsplit .htxt p{max-width:52ch}
+.hsplit .names{margin:.4em 0 1.2em}
+@media(min-width:900px){.hsplit .htxt{padding-top:100px;padding-bottom:70px}}
+
+/* logos des maisons de formation */
+.trainers{display:flex;flex-wrap:wrap;align-items:center;gap:22px 34px;margin:6px 0 20px;max-width:56ch}
+.trainers img{width:auto;max-width:130px;object-fit:contain;filter:brightness(0) invert(1);opacity:.92}
+.trainer-txt{font:500 .8rem var(--sans);letter-spacing:.26em;text-transform:uppercase;color:#fff}
+
+.trainers img[src*="avene"]{height:40px;filter:brightness(0) invert(1);opacity:.92}.trainers img[src*="nuxe"]{height:30px}
+.hsplit .trainers{margin:18px 0 0}
+/* logos : grille régulière */
+.hsplit .trainers{display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:520px;margin:26px 0 0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.hsplit .trainers>*{display:flex;align-items:center;justify-content:center;height:76px;padding:14px 12px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);margin:0}
+.hsplit .trainers img{width:auto;height:auto;max-width:100%;max-height:34px;object-fit:contain}
+.hsplit .trainers img[src*="avene"]{max-height:44px}
+.hsplit .trainers img[src*="bioderma"],.hsplit .trainers img[src*="nuxe"]{max-height:28px}
+.hsplit .trainers .trainer-txt{font-size:.58rem;letter-spacing:.16em;text-align:center;line-height:1.5}
+@media(max-width:560px){.hsplit .trainers{grid-template-columns:repeat(2,1fr)}}
+.hsplit .trainers{grid-auto-rows:80px}
+.hsplit .trainers>*{height:80px;box-sizing:border-box;min-width:0}
+.hsplit .trainers img{width:100%;height:100%;max-height:none;padding:0;object-fit:contain;filter:brightness(0) invert(1);opacity:.95}
+.hsplit .trainers img[src*="avene"],.hsplit .trainers img[src*="bioderma"],.hsplit .trainers img[src*="nuxe"]{max-height:none}
+.hsplit .trainers>img{padding:20px 12px}
+.hsplit .trainers>img[src*="avene"]{padding:16px 12px}
+.hsplit .trainers>img[src*="bioderma"],.hsplit .trainers>img[src*="nuxe"]{padding:24px 10px}
+/* logos sans cadre ni filet */
+.hsplit .trainers{border:0;gap:6px 0}
+.hsplit .trainers>*{border:0}
+/* page À propos : bloc de texte remonté */
+@media(min-width:900px){
+.hsplit .htxt{padding-top:24px;padding-bottom:50px;justify-content:flex-start}
+.hsplit{min-height:auto}
+}
+.hsplit .trainers .trainer-txt{font:500 .86rem var(--sans);letter-spacing:.2em;line-height:1.35;white-space:normal}
+.hsplit .trainers .trainer-txt{font-size:.8rem;letter-spacing:.1em;white-space:nowrap;padding:0 4px}
+.imm-bg img[src*="sophie-epilation-laser"]{object-position:50% 12%}
+
+/* citation : taille maîtrisée */
+.story .pull{font-size:clamp(1.35rem,2.1vw,1.85rem)!important;line-height:1.5;max-width:34ch!important}
+.story h2{max-width:22ch;margin-left:auto;margin-right:auto}
+
+/* naissance : texte à gauche, façade à droite */
+.naissance{display:grid;gap:40px;align-items:center}
+.naissance .txt{text-align:left}
+.naissance .txt h2{margin-left:0;margin-right:0;max-width:none}
+.naissance .txt .eyebrow{display:block}
+.naissance .txt p{margin-left:0;margin-right:0;text-align:left;max-width:46ch}
+.naissance .txt .pull{margin:1em 0 1.2em!important;max-width:34ch!important;font-size:clamp(1.3rem,1.9vw,1.7rem)!important}
+.naissance .pic .photo{width:100%;aspect-ratio:16/10;object-fit:cover;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 16%,#000 100%),linear-gradient(to bottom,transparent 0,#000 10%,#000 90%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0,#000 16%,#000 100%),linear-gradient(to bottom,transparent 0,#000 10%,#000 90%,transparent 100%);mask-composite:intersect}
+@media(min-width:900px){.naissance{grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:clamp(24px,4vw,64px)}}
+@media(max-width:899px){.naissance .pic .photo{-webkit-mask-image:linear-gradient(to bottom,#000 80%,transparent 100%);mask-image:linear-gradient(to bottom,#000 80%,transparent 100%)}}
+
+/* naissance immersive */
+.imm:has(img[src*="facade-institut"]){min-height:min(92vh,860px)}
+.imm-bg img[src*="facade-institut"]{object-position:62% 45%}
+.imm:has(img[src*="facade-institut"]) .imm-txt{max-width:500px}
+.imm:has(img[src*="facade-institut"]) .pull{font:400 clamp(1.25rem,1.8vw,1.6rem)/1.5 var(--serif)!important;color:#f4ecdc!important;margin:1em 0 1.2em!important;max-width:none!important;text-align:left}
+.imm:has(img[src*="facade-institut"]) .imm-txt p{text-align:left;margin-left:0;max-width:none}
+.imm:has(img[src*="facade-institut"])::after{background:linear-gradient(90deg,rgba(32,24,18,.94) 0,rgba(32,24,18,.82) 36%,rgba(32,24,18,.2) 66%,rgba(32,24,18,0) 100%)}
+@media(min-width:900px){
+.imm-bg img[src*="facade-institut"]{width:68%;left:auto;right:0;height:100%;object-fit:cover;object-position:55% 40%;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 30%,#000 100%),linear-gradient(to bottom,transparent 0,#000 12%,#000 88%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 0,#000 30%,#000 100%),linear-gradient(to bottom,transparent 0,#000 12%,#000 88%,transparent 100%);mask-composite:intersect}
+.imm:has(img[src*="facade-institut"])::after{background:linear-gradient(90deg,#201812 0,#201812 30%,rgba(32,24,18,0) 48%)}
+.imm:has(img[src*="facade-institut"]) .imm-txt{max-width:460px}
+}
+@media(min-width:900px){
+.imm-bg img[src*="facade-institut"]{width:74%;object-position:48% 40%;-webkit-mask-image:linear-gradient(to right,transparent 0,rgba(0,0,0,.5) 18%,#000 38%,#000 100%),linear-gradient(to bottom,transparent 0,#000 12%,#000 88%,transparent 100%);mask-image:linear-gradient(to right,transparent 0,rgba(0,0,0,.5) 18%,#000 38%,#000 100%),linear-gradient(to bottom,transparent 0,#000 12%,#000 88%,transparent 100%)}
+.imm:has(img[src*="facade-institut"])::after{background:linear-gradient(90deg,#201812 0,#201812 26%,rgba(32,24,18,0) 46%)}
+}
+
+/* exigence : fond continu, fondus vers les sections voisines */
+.warm section.exigence{background:var(--paper);position:relative;padding:clamp(40px,5vw,72px) 0;margin:0}
+.warm section.exigence::before,.warm section.exigence::after{content:"";position:absolute;left:0;right:0;height:90px;pointer-events:none}
+.warm section.exigence::before{top:0;background:linear-gradient(to bottom,var(--paper),rgba(32,24,18,0))}
+.warm section.exigence::after{bottom:0;background:linear-gradient(to top,var(--paper),rgba(32,24,18,0))}
+.warm section.exigence .wrap{position:relative;z-index:1}
+.hsplit + section.exigence{margin-top:-60px;padding-top:clamp(80px,8vw,120px)}
+.warm section.exigence + .imm{margin-top:-1px}
+.warm section.exigence .words{border-color:var(--line);max-width:760px}
+
+/* menu : 5 liens à gauche, 2 + bouton à droite */
+@media(min-width:1100px){
+.hdr .wrap{grid-template-columns:1fr 150px 1fr;gap:18px;padding:0 24px}
+.nav.l{gap:16px}.nav.r{gap:20px}
+.nav a{font-size:.62rem;letter-spacing:.1em}
+.logo,.logo-img{width:130px}
+}
+@media(min-width:1380px){.nav.l{gap:22px}.nav a{font-size:.68rem;letter-spacing:.13em}.hdr .wrap{grid-template-columns:1fr 170px 1fr;padding:0 32px}.logo,.logo-img{width:150px}}
+@media(min-width:1100px){
+.hdr .wrap{grid-template-columns:minmax(0,1fr) 150px minmax(0,1fr)}
+.nav.l{justify-self:start;gap:14px;flex-wrap:nowrap}
+.nav.l a{font-size:.58rem;letter-spacing:.07em}
+.nav.r{justify-self:end}
+}
+@media(min-width:1280px){.nav.l{gap:16px}.nav.l a{font-size:.62rem;letter-spacing:.09em}}
+@media(min-width:1380px){.hdr .wrap{grid-template-columns:minmax(0,1fr) 170px minmax(0,1fr)}.nav.l{gap:20px}.nav.l a{font-size:.66rem;letter-spacing:.12em}}
+@media(min-width:1560px){.nav.l{gap:28px}.nav.l a{font-size:.7rem;letter-spacing:.14em}}
+
+/* menu desktop dès 1260 px, compact */
+@media(min-width:1100px) and (max-width:1259px){.hdr .wrap{display:flex;padding:0 20px;height:68px}.logo,.logo-img{width:118px}.hdr .wrap>.nav{display:none}.burger{display:block}}
+@media(min-width:1260px){
+.hdr .wrap{display:grid;grid-template-columns:minmax(0,1fr) 150px minmax(0,1fr);gap:16px;padding:0 26px}
+.nav.l{gap:12px}.nav.l a{font-size:.55rem;letter-spacing:.06em}
+.nav.r a{font-size:.58rem;letter-spacing:.08em}.nav.r{gap:16px}
+.logo,.logo-img{width:130px}
+}
+@media(min-width:1380px){.nav.l{gap:15px}.nav.l a{font-size:.6rem;letter-spacing:.075em}.nav.r a{font-size:.64rem}.hdr .wrap{grid-template-columns:minmax(0,1fr) 160px minmax(0,1fr)}.logo,.logo-img{width:150px}}
+@media(min-width:1560px){.nav.l{gap:24px}.nav.l a{font-size:.68rem;letter-spacing:.12em}.nav.r a{font-size:.7rem;letter-spacing:.12em}.hdr .wrap{padding:0 40px;grid-template-columns:minmax(0,1fr) 190px minmax(0,1fr)}.logo,.logo-img{width:170px}}
+@media(min-width:1560px){.nav.l{gap:18px}.nav.l a{font-size:.62rem;letter-spacing:.09em}.nav.r a{font-size:.66rem;letter-spacing:.1em}.hdr .wrap{padding:0 40px;grid-template-columns:minmax(0,1fr) 170px minmax(0,1fr)}.logo,.logo-img{width:150px}}
+
+/* bandeau : logo pile au centre, liens de gauche au bord gauche */
+@media(min-width:1260px){
+.hdr .wrap{max-width:none;width:100%;display:grid;grid-template-columns:minmax(0,1fr) 150px minmax(0,1fr);gap:0;padding:0 28px}
+.nav.l{justify-self:start;padding-right:20px}
+.nav.r{justify-self:end;padding-left:20px}
+.logo{justify-self:center;margin:0}
+.nav.l{gap:13px}.nav.l a{font-size:.56rem;letter-spacing:.06em}
+.nav.r{gap:14px}.nav.r a{font-size:.56rem;letter-spacing:.06em}
+.nav.r .btn{margin-left:2px;padding:0 16px}
+}
+@media(min-width:1400px){.nav.l{gap:18px}.nav.l a,.nav.r a{font-size:.62rem;letter-spacing:.09em}.nav.r{gap:18px}.hdr .wrap{grid-template-columns:minmax(0,1fr) 170px minmax(0,1fr)}.logo,.logo-img{width:150px}}
+@media(min-width:1600px){.nav.l{gap:28px}.nav.r{gap:26px}.nav.l a,.nav.r a{font-size:.68rem;letter-spacing:.13em}.hdr .wrap{padding:0 44px;grid-template-columns:minmax(0,1fr) 190px minmax(0,1fr)}.logo,.logo-img{width:170px}}
+@media(min-width:1600px){.nav.l{gap:20px}.nav.r{gap:20px}.nav.l a,.nav.r a{font-size:.64rem;letter-spacing:.1em}.hdr .wrap{grid-template-columns:minmax(0,1fr) 170px minmax(0,1fr)}.logo,.logo-img{width:150px}}
+@media(min-width:1800px){.nav.l{gap:28px}.nav.r{gap:26px}.nav.l a,.nav.r a{font-size:.68rem;letter-spacing:.13em}.hdr .wrap{grid-template-columns:minmax(0,1fr) 190px minmax(0,1fr)}.logo,.logo-img{width:170px}}
+
+/* page partenaires */
+.pt-intro{padding:clamp(120px,14vw,180px) 0 clamp(24px,4vw,56px)}
+.pt-intro h1{font-size:clamp(2rem,4vw,3.2rem);max-width:20ch;margin-left:auto;margin-right:auto}
+.pt-intro h1 em{color:var(--gold)}
+.partner{padding:clamp(48px,6vw,88px) 0}
+.partner-grid{display:grid;gap:28px}
+.partner h2 em{color:var(--gold)}
+.partner .badge{display:inline-block;margin-top:.6em;padding:8px 14px;border:1px solid var(--gold);font:500 .66rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--ink)}
+.partner .ph-body p{max-width:60ch}
+.partner .ph-body strong{font-weight:500;color:var(--ink)}
+@media(min-width:900px){.partner-grid{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(48px,7vw,110px);align-items:start}.partner .ph-head{position:sticky;top:110px}}
+.partner{scroll-margin-top:90px}
+
+/* partenaires : titre + mur de logos */
+.pt-grid{display:grid;gap:44px;align-items:center}
+.pt-intro .intro{text-align:left;margin:0;max-width:none}
+.pt-intro .intro h1{margin-left:0;margin-right:0;max-width:16ch}
+.pt-intro .intro p{margin-left:0;text-align:left}
+.pt-intro .intro .eyebrow{display:block}
+.logo-wall{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:92px}
+.logo-wall>*{display:flex;align-items:center;justify-content:center;min-width:0;padding:0 14px}
+.logo-wall img{width:100%;height:100%;max-height:none;object-fit:contain;filter:brightness(0) invert(1);opacity:.95;padding:26px 6px}
+.logo-wall img[src*="avene"]{padding:18px 6px}
+.logo-wall img[src*="bioderma"],.logo-wall img[src*="nuxe"],.logo-wall img[src*="talika"]{padding:30px 8px}
+.lw-txt{font:500 .86rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#fff;white-space:nowrap;text-align:center}
+@media(min-width:900px){.pt-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,100px)}}
+@media(max-width:560px){.logo-wall{grid-template-columns:repeat(2,1fr)}}
+.logo-wall{grid-auto-rows:104px;gap:6px 10px}
+.logo-wall>*{padding:0 22px}
+.logo-wall img{padding:30px 0}
+.logo-wall img[src*="avene"]{padding:20px 0}
+.logo-wall img[src*="bioderma"],.logo-wall img[src*="nuxe"],.logo-wall img[src*="talika"]{padding:34px 0}
+.logo-wall img[src*="orlane"]{padding:30px 0}
+.logo-wall img{padding:30px 26px}
+.logo-wall img[src*="avene"]{padding:20px 26px}
+.logo-wall img[src*="bioderma"],.logo-wall img[src*="nuxe"],.logo-wall img[src*="talika"]{padding:34px 22px}
+.logo-wall img[src*="orlane"]{padding:30px 24px}
+.logo-wall>*{padding-left:0;padding-right:0}
+.logo-wall>.lw-txt{padding:0 12px}
+/* partenaires : raccords doux entre sections */
+.warm .partner.alt{background:linear-gradient(to bottom,var(--paper) 0,var(--grey) 140px,var(--grey) calc(100% - 140px),var(--paper) 100%)}
+.warm .partner{padding:clamp(56px,7vw,100px) 0}
+.pt-intro{padding-bottom:clamp(40px,5vw,72px)}
+.partner + .partner{margin-top:0}
+.warm .cta-final{background:linear-gradient(to bottom,var(--paper) 0,var(--grey) 160px,var(--grey) 100%);padding-top:clamp(100px,10vw,150px)}
+.partner:last-of-type + .cta-final{margin-top:0}
+
+.partner h2.has-logo{margin:.2em 0 .3em;line-height:1}
+.partner-logo{display:block;width:min(300px,100%);height:auto;filter:brightness(0) invert(1);opacity:.96}
+.partner-logo[src*="talika"]{width:min(240px,100%)}
+.partner-logo[src*="orlane"]{width:min(260px,100%)}
+.partner-logo[src*="tropic"]{width:min(300px,100%);filter:none;opacity:1}
+
+.partner-logo[src*="planity"]{width:min(220px,100%);filter:none;opacity:1}
+/* partenaires : bloc d'ouverture remonté */
+.pt-intro{padding-top:clamp(36px,4vw,56px);padding-bottom:clamp(24px,3vw,44px)}
+.pt-grid{align-items:start}
+.pt-intro .intro{padding-top:0}
+.logo-wall{margin-top:0}
+
+/* Tropic Spa : logo d'origine en couleurs sur plaque claire */
+.partner h2.has-logo.plate{display:inline-block;background:#f6f1e6;padding:14px 20px;margin:.4em 0 .4em}
+.partner h2.plate .partner-logo{filter:none;opacity:1;mix-blend-mode:multiply;width:min(340px,100%)}
+.partner-logo[src*="i-motion"]{width:min(300px,100%);filter:none;opacity:1}
+
+/* Keros + Alphaline */
+.partner .duo{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.partner .keros-logo{width:130px;height:auto;filter:brightness(0) invert(1)}
+.partner .alpha-logo{width:min(280px,100%);height:auto;filter:brightness(0) invert(1)}
+.logo-wall img[src*="keros"]{padding:10px 30px}
+.partner .duo{gap:20px;flex-wrap:nowrap}.partner .keros-logo{width:96px}.partner .alpha-logo{width:min(220px,100%)}
+
+.partner h2.has-logo.plate{display:inline-block;background:#f4f0e8;padding:10px 16px;margin:.3em 0}
+.partner h2.plate .partner-logo{filter:none;opacity:1;mix-blend-mode:multiply;width:min(300px,100%)}
+.partner h2.has-logo.plate{display:block;width:fit-content;max-width:100%;padding:12px 18px}
+.partner h2.plate .partner-logo{width:300px;max-width:100%;height:auto}
+
+/* Tropic Spa : fond transparent, posé directement sur la page */
+.partner h2.has-logo{background:none;padding:0;width:auto}
+.partner h2.has-logo .partner-logo[src*="tropic"]{mix-blend-mode:normal;filter:none;opacity:1;width:min(320px,100%);height:auto}
+
+/* Jacuzzi Gloria détouré, posé directement sur le fond */
+.partner .gloria{display:block;width:100%;max-width:640px;height:auto;margin:28px 0 0;background:none;border-radius:0;-webkit-mask-image:none;mask-image:none;filter:drop-shadow(0 18px 28px rgba(0,0,0,.45))}
+/* menu : texte plus gros */
+@media(min-width:1260px){
+.nav.l a,.nav.r a{font-size:.72rem;letter-spacing:.1em}
+.nav.l{gap:16px}.nav.r{gap:18px}
+.hdr .wrap{padding:0 24px;grid-template-columns:minmax(0,1fr) 150px minmax(0,1fr)}
+.logo,.logo-img{width:130px}
+}
+@media(min-width:1400px){.nav.l a,.nav.r a{font-size:.78rem;letter-spacing:.11em}.nav.l{gap:22px}.nav.r{gap:22px}.hdr .wrap{grid-template-columns:minmax(0,1fr) 160px minmax(0,1fr);padding:0 30px}.logo,.logo-img{width:150px}}
+@media(min-width:1600px){.nav.l a,.nav.r a{font-size:.84rem;letter-spacing:.12em}.nav.l{gap:30px}.nav.r{gap:28px}.hdr .wrap{grid-template-columns:minmax(0,1fr) 180px minmax(0,1fr);padding:0 40px}.logo,.logo-img{width:165px}}
+@media(min-width:1800px){.nav.l a,.nav.r a{font-size:.9rem;letter-spacing:.14em}.nav.l{gap:38px}.nav.r{gap:34px}.hdr .wrap{padding:0 56px}}
+/* menu : gauche ajustée pour ne jamais toucher le logo, droite plus grosse */
+@media(min-width:1260px){
+.nav.l{gap:12px}.nav.l a{font-size:.58rem;letter-spacing:.05em}
+.nav.r a{font-size:.72rem;letter-spacing:.1em}
+}
+@media(min-width:1400px){.nav.l{gap:15px}.nav.l a{font-size:.64rem;letter-spacing:.07em}.nav.r a{font-size:.78rem;letter-spacing:.11em}}
+@media(min-width:1600px){.nav.l{gap:22px}.nav.l a{font-size:.72rem;letter-spacing:.09em}.nav.r a{font-size:.84rem;letter-spacing:.12em}}
+@media(min-width:1800px){.nav.l{gap:30px}.nav.l a{font-size:.8rem;letter-spacing:.11em}.nav.r a{font-size:.9rem;letter-spacing:.13em}}
+
+/* menu : gauche aussi grosse que la droite */
+@media(min-width:1260px){.nav.l{gap:14px}.nav.l a{font-size:.64rem;letter-spacing:.06em}.nav.r a{font-size:.68rem}}
+@media(min-width:1400px){.nav.l{gap:20px}.nav.l a{font-size:.74rem;letter-spacing:.08em}.nav.r a{font-size:.78rem;letter-spacing:.1em}}
+@media(min-width:1600px){.nav.l{gap:28px}.nav.l a{font-size:.82rem;letter-spacing:.1em}.nav.r a{font-size:.84rem;letter-spacing:.11em}}
+@media(min-width:1800px){.nav.l{gap:38px}.nav.l a{font-size:.9rem;letter-spacing:.12em}.nav.r a{font-size:.9rem;letter-spacing:.12em}}
+/* mobile : photo en haut, texte dessous sur fond uni */
+@media(max-width:899px){
+.warm .imm{display:block;min-height:0;padding:0;background:#201812}
+.warm .imm .imm-bg{position:relative;inset:auto;width:100%;height:min(88vw,460px);overflow:hidden}
+.warm .imm .imm-bg img,.warm .imm .imm-bg .photo{position:absolute!important;inset:0!important;left:0!important;right:0!important;width:100%!important;height:100%!important;object-fit:cover;-webkit-mask-image:linear-gradient(to bottom,#000 62%,transparent 100%)!important;mask-image:linear-gradient(to bottom,#000 62%,transparent 100%)!important}
+.warm .imm::before,.warm .imm::after,.warm .imm.l::after,.warm .imm.r::after{display:none!important;content:none!important}
+.warm .imm .wrap{position:relative;z-index:2;margin-top:-18px;padding-bottom:44px}
+.warm .imm .imm-txt{max-width:none;padding:0 0 8px;margin:0}
+.warm .imm.r .imm-txt{margin-left:0}
+.warm .imm .imm-txt p{color:#efe6d3}
+.warm .imm .imm-logo{position:absolute;top:18px;left:20px;z-index:3}
+}
+@media(max-width:899px){.warm .imm,.warm .imm:has(img){min-height:0!important}.warm .imm .wrap{padding-bottom:28px}.warm .imm .imm-txt{padding-bottom:0}.warm .partners{margin:0;padding:48px 0 36px}}
+/* fondu entre les pages : transition native (sans coût de chargement), repli CSS/JS sinon */
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:sbOut .35s ease both}
+::view-transition-new(root){animation:sbIn .5s ease both}
+@keyframes sbOut{to{opacity:0}}
+@keyframes sbIn{from{opacity:0}to{opacity:1}}
+@keyframes sbPageIn{from{opacity:0}to{opacity:1}}
+@supports not (view-transition-name:none){
+ body{animation:sbPageIn .3s ease-out both}
+ body.leaving{opacity:0;transition:opacity .3s ease;animation:none}
+}
+@media(prefers-reduced-motion:reduce){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}body{animation:none!important}}
+/* mobile : portrait fondu en haut et en bas */
+@media(max-width:899px){
+.warm .hsplit .hpic{position:relative;margin:-24px 0 -56px;z-index:0}
+.warm .hsplit .hpic .photo{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 18%;-webkit-mask-image:linear-gradient(to bottom,transparent 0,rgba(0,0,0,.6) 9%,#000 24%,#000 62%,rgba(0,0,0,.55) 82%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,rgba(0,0,0,.6) 9%,#000 24%,#000 62%,rgba(0,0,0,.55) 82%,transparent 100%)}
+.warm .hsplit .hpic::after{display:none}
+.warm .hsplit .htxt{position:relative;z-index:2;padding-bottom:12px}
+.warm .hsplit + section.exigence{margin-top:0;padding-top:40px}
+}
+/* mobile : dégradé long et doux (courbe progressive) sur le portrait */
+@media(max-width:899px){
+.warm .hsplit .hpic{margin:-8px 0 -90px}
+.warm .hsplit .hpic .photo{aspect-ratio:4/5.2;object-position:50% 14%;
+-webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.05) 6%,rgba(0,0,0,.2) 13%,rgba(0,0,0,.48) 22%,rgba(0,0,0,.78) 33%,#000 44%,#000 58%,rgba(0,0,0,.8) 68%,rgba(0,0,0,.5) 78%,rgba(0,0,0,.2) 89%,rgba(0,0,0,0) 100%);
+mask-image:linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.05) 6%,rgba(0,0,0,.2) 13%,rgba(0,0,0,.48) 22%,rgba(0,0,0,.78) 33%,#000 44%,#000 58%,rgba(0,0,0,.8) 68%,rgba(0,0,0,.5) 78%,rgba(0,0,0,.2) 89%,rgba(0,0,0,0) 100%)}
+}
+@media(max-width:899px){.warm .hsplit .hpic{margin:-8px 0 -30px;position:relative;z-index:1}.warm .hsplit + section.exigence{position:relative;z-index:0;padding-top:20px}.warm .hsplit + section.exigence::before{display:none}}
+
+/* plein écran iPhone : contenu derrière l'encoche et la barre d'état, marges de sécurité */
+html{background:#201812}
+.hdr{padding-top:env(safe-area-inset-top)}
+.hdr .wrap{padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+.mbar{padding-bottom:env(safe-area-inset-bottom)}
+.mbar a{min-height:calc(56px)}
+.ftr{padding-bottom:calc(130px + env(safe-area-inset-bottom))}
+.mmenu{padding-top:calc(90px + env(safe-area-inset-top));padding-bottom:calc(40px + env(safe-area-inset-bottom))}
+.totop{bottom:calc(76px + env(safe-area-inset-bottom))}
+.cookie{bottom:calc(76px + env(safe-area-inset-bottom))}
+@media(max-width:899px){.hero{min-height:100svh}@supports(height:100dvh){.hero{min-height:100dvh}}.hero.page{min-height:min(70svh,640px)}}
+main.pt{padding-top:calc(88px + env(safe-area-inset-top))}
+@media(max-width:1099px){main.pt{padding-top:calc(68px + env(safe-area-inset-top))}}
+.hero .wrap{padding-top:calc(110px + env(safe-area-inset-top))}
+/* ===== accueil smartphone : rythme et proportions régulières ===== */
+@media(max-width:899px){
+/* photos : même format partout */
+.warm .imm .imm-bg{height:82vw;max-height:380px}
+.warm .imm .imm-bg img{object-position:50% 30%!important}
+.warm .imm .imm-bg img[src*="sophie-epilation-laser"]{object-position:50% 12%!important}
+.warm .imm .imm-bg img[src*="cabine-massage-soins"]{object-position:50% 40%!important}
+.warm .imm .imm-bg img[src*="jacuzzi-bulles"]{object-position:30% 50%!important}
+.warm .imm .imm-bg img[src*="sultane-de-saba-rituels"]{object-position:50% 50%!important}
+.warm .imm .imm-bg img[src*="place-de-la-nation"]{object-position:50% 55%!important}
+.warm .imm .imm-bg img[src*="facade-institut"]{object-position:60% 40%!important}
+/* rythme entre sections */
+.warm .imm .wrap{margin-top:-30px;padding-bottom:20px}
+.warm .imm .imm-txt h2{font-size:1.9rem;margin-bottom:.35em}
+.warm .imm .imm-txt p{font-size:.95rem;line-height:1.7}
+.warm section.intro-s,.warm .hero + section{padding-top:44px;padding-bottom:28px}
+/* partenaires : sur une ligne, compact */
+.warm .partners{padding:28px 0 20px}
+.warm .partners .brand-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:18px 26px}
+.warm .partners .brand-logo[src*="orlane"]{width:112px}
+.warm .partners .brand-logo[src*="sultane"]{width:150px}
+.warm .partners .brand-txt,.warm .partners img[src*="keros"]{height:auto}
+.warm .partners .eyebrow{font-size:.62rem;letter-spacing:.22em;margin-bottom:16px}
+/* quatre engagements : grille 2 x 2 */
+.warm .why-grid,.warm .engage{display:grid;grid-template-columns:1fr 1fr;gap:26px 22px}
+/* sceau Orlane plus petit */
+.warm .orlane-b21{padding:36px 0 40px}
+.warm .orlane-b21 .seal img{max-width:210px}
+.warm .orlane-b21 .grid{gap:26px}
+}
+
+@media(max-width:899px){
+.warm .engage .card{padding-top:16px}
+.warm .engage .card h3{font-size:1.05rem;line-height:1.25;margin-bottom:.4em}
+.warm .engage .card p{font-size:.85rem;line-height:1.55}
+.warm .engage .card.rv{opacity:1;transform:none}
+}
+
+/* corrections accueil mobile : sur-titres et prix */
+@media(max-width:899px){
+.warm .imm .imm-txt p.eyebrow{font-size:.68rem;line-height:1.5;letter-spacing:.3em;color:var(--gold);margin:0 0 .9rem}
+.warm .imm .imm-txt p.price{font-size:1.5rem;line-height:1.2;margin:0 0 1.2rem;color:var(--ink)}
+.warm .imm .imm-txt p.meta{font-size:.8rem;margin:0 0 .3rem}
+.warm .partners{padding:30px 0 44px}
+.warm .partners .brand-logo.keros-home{width:64px;height:auto}
+}
+.partners .brand-logo.keros-home{width:84px;height:auto;filter:brightness(0) invert(1)}
+.partners .brand-row a{display:flex;align-items:center}
+/* mobile : l'en-tête se fond dans la barre d'état (dégradé), plus de coupure nette avec la photo */
+@media(max-width:1099px){
+.hdr.over{background:linear-gradient(to bottom,#201812 0,rgba(32,24,18,.88) 45%,rgba(32,24,18,.45) 75%,rgba(32,24,18,0) 100%);border-color:transparent}
+.hdr.over.solid,.hdr.solid{background:rgba(32,24,18,.97)}
+}
+
+/* barre fixe du bas supprimée : on libère l'espace */
+.mbar{display:none!important}
+.ftr{padding-bottom:calc(56px + env(safe-area-inset-bottom))}
+.totop{bottom:calc(20px + env(safe-area-inset-bottom))}
+.cookie{bottom:calc(16px + env(safe-area-inset-bottom))}
+@media(min-width:1100px){.cookie{bottom:24px}}
+/* ===== accueil smartphone : photo plein cadre, texte posé en bas sur dégradé ===== */
+@media(max-width:899px){
+.warm .imm{display:flex!important;flex-direction:column;justify-content:flex-end;position:relative;min-height:132vw!important;padding:0!important;overflow:hidden;background:#201812}
+.warm .imm .imm-bg{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-height:none!important}
+.warm .imm .imm-bg img,.warm .imm .imm-bg .photo{-webkit-mask-image:none!important;mask-image:none!important;object-fit:cover}
+/* dégradés : fond sombre en bas (lisibilité du texte), léger fondu en haut (raccord avec la section précédente) */
+.warm .imm::before{content:""!important;display:block!important;position:absolute;left:0;right:0;top:0;height:16%;z-index:1;background:linear-gradient(to bottom,#201812,rgba(32,24,18,0));pointer-events:none}
+.warm .imm::after,.warm .imm.l::after,.warm .imm.r::after{content:""!important;display:block!important;position:absolute!important;left:0;right:0;bottom:0;top:auto;height:78%;z-index:1;background:linear-gradient(to bottom,rgba(32,24,18,0) 0,rgba(32,24,18,.5) 34%,rgba(32,24,18,.86) 60%,#201812 88%)!important;pointer-events:none}
+.warm .imm .wrap{position:relative;z-index:2;margin:0!important;padding:0 24px 34px!important}
+.warm .imm .imm-txt{max-width:none;padding:0!important;margin:0!important}
+.warm .imm .imm-txt h2{font-size:2rem;text-shadow:0 2px 18px rgba(0,0,0,.45)}
+.warm .imm .imm-txt p{text-shadow:0 1px 12px rgba(0,0,0,.5)}
+.warm .imm .imm-logo{top:max(22px,env(safe-area-inset-top));left:24px}
+}
+@media(max-width:899px){
+.warm .imm,.warm .imm:has(img){min-height:128vw!important}
+.warm .imm:has(img[src*="place-de-la-nation"]),.warm .imm:has(img[src*="sultane-de-saba-rituels"]){min-height:118vw!important}
+}
+@media(max-width:899px){
+.warm .imm::after,.warm .imm.l::after,.warm .imm.r::after{height:88%;background:linear-gradient(to bottom,rgba(32,24,18,0) 0,rgba(32,24,18,.42) 24%,rgba(32,24,18,.82) 44%,rgba(32,24,18,.95) 62%,#201812 82%)!important}
+.warm .imm .imm-txt p.eyebrow{color:#e8c77a;text-shadow:0 1px 10px rgba(0,0,0,.7)}
+.warm .imm .imm-txt h2 em{color:#e8c77a}
+.warm .imm .imm-txt{padding-top:22px!important}
+}
+@media(max-width:899px){
+.warm .imm,.warm .imm:has(img){min-height:150vw!important}
+.warm .imm:has(img[src*="place-de-la-nation"]),.warm .imm:has(img[src*="sultane-de-saba-rituels"]){min-height:136vw!important}
+.warm .imm::after,.warm .imm.l::after,.warm .imm.r::after{height:62%;background:linear-gradient(to bottom,rgba(32,24,18,0) 0,rgba(32,24,18,.55) 38%,rgba(32,24,18,.9) 68%,#201812 92%)!important}
+.warm .imm .imm-bg img{object-position:50% 22%!important}
+.warm .imm .imm-bg img[src*="sophie-epilation-laser"]{object-position:50% 8%!important}
+.warm .imm .imm-bg img[src*="cabine-massage-soins"]{object-position:50% 30%!important}
+.warm .imm .imm-bg img[src*="jacuzzi-bulles"]{object-position:28% 40%!important}
+.warm .imm .imm-bg img[src*="place-de-la-nation"]{object-position:50% 40%!important}
+.warm .imm .wrap{padding-bottom:30px!important}
+.warm .imm .imm-txt{padding-top:6px!important}
+}
+/* ===== accueil smartphone (v3) : photo entière en haut + texte sur fond uni, raccord en fondu ===== */
+@media(max-width:899px){
+.warm .imm,.warm .imm:has(img),.warm .imm:has(img[src*="place-de-la-nation"]),.warm .imm:has(img[src*="sultane-de-saba-rituels"]){display:block!important;min-height:0!important;overflow:visible;background:#201812}
+.warm .imm .imm-bg{position:relative!important;inset:auto!important;width:100%!important;height:92vw!important;max-height:440px!important;overflow:hidden}
+.warm .imm .imm-bg img,.warm .imm .imm-bg .photo{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover}
+/* fondu de la photo vers le fond uni, en bas uniquement */
+.warm .imm::before{display:none!important;content:none!important}
+.warm .imm::after,.warm .imm.l::after,.warm .imm.r::after{display:none!important;content:none!important}
+.warm .imm .imm-bg::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46%;z-index:1;background:linear-gradient(to bottom,rgba(32,24,18,0),rgba(32,24,18,.7) 55%,#201812 100%);pointer-events:none}
+.warm .imm .wrap{position:relative;z-index:2;margin:-6px 0 0!important;padding:0 24px 38px!important}
+.warm .imm .imm-txt{padding:0!important;background:none}
+.warm .imm .imm-txt h2,.warm .imm .imm-txt p{text-shadow:none!important}
+.warm .imm .imm-txt p{color:#efe6d3}
+.warm .imm .imm-txt p.eyebrow{color:var(--gold);margin-bottom:.8rem}
+.warm .imm .imm-txt h2 em{color:var(--gold)}
+.warm .imm .imm-logo{top:22px;left:24px}
+}
+/* ===== iPhone : photo d'abord, puis le texte vient se poser sur le bas de la photo (dégradé progressif) ===== */
+@media(max-width:899px){
+/* section À propos : le portrait se prolonge sous le texte suivant */
+.warm .hsplit .hpic{margin:-8px 0 0!important;position:relative;z-index:0}
+.warm .hsplit .hpic .photo{aspect-ratio:4/5!important;-webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.35) 8%,#000 22%,#000 56%,rgba(0,0,0,.6) 80%,rgba(0,0,0,.18) 94%,rgba(0,0,0,0) 100%)!important;mask-image:linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.35) 8%,#000 22%,#000 56%,rgba(0,0,0,.6) 80%,rgba(0,0,0,.18) 94%,rgba(0,0,0,0) 100%)!important}
+.warm .hsplit + section.exigence{position:relative;z-index:2;margin-top:-34vw!important;padding-top:0!important}
+.warm .hsplit + section.exigence .story{padding-top:4px}
+.warm .hsplit + section.exigence::before{display:none!important}
+.warm .hsplit + section.exigence .story h2,.warm .hsplit + section.exigence .story p{text-shadow:0 1px 14px rgba(0,0,0,.65)}
+/* accueil : chaque texte remonte sur le bas de sa photo */
+.warm .imm .imm-bg{height:104vw!important;max-height:520px!important}
+.warm .imm .imm-bg::after{height:58%!important;background:linear-gradient(to bottom,rgba(32,24,18,0) 0,rgba(32,24,18,.32) 30%,rgba(32,24,18,.74) 62%,#201812 96%)!important}
+.warm .imm .wrap{margin-top:-26vw!important;padding-bottom:36px!important}
+.warm .imm .imm-txt h2,.warm .imm .imm-txt p{text-shadow:0 1px 14px rgba(0,0,0,.6)!important}
+.warm .imm .imm-txt p.eyebrow{color:#e8c77a}
+.warm .imm .imm-txt h2 em{color:#e8c77a}
+}
+@media(max-width:899px){
+/* À propos : la photo reste opaque, c'est un dégradé brun posé dessus qui fait la transition */
+.warm .hsplit .hpic .photo{-webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.4) 7%,#000 18%,#000 100%)!important;mask-image:linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.4) 7%,#000 18%,#000 100%)!important}
+.warm .hsplit .hpic::after{display:block!important;content:"";position:absolute;left:0;right:0;bottom:0;height:46%;z-index:1;background:linear-gradient(to bottom,rgba(32,24,18,0) 0,rgba(32,24,18,.45) 34%,rgba(32,24,18,.82) 68%,#201812 96%);pointer-events:none}
+.warm .hsplit + section.exigence{margin-top:-30vw!important}
+}
+@media(max-width:899px){
+.warm .hsplit .hpic::after{height:58%;background:linear-gradient(to bottom,rgba(32,24,18,0) 0,rgba(32,24,18,.3) 24%,rgba(32,24,18,.66) 52%,rgba(32,24,18,.92) 80%,#201812 100%)}
+.warm .hsplit + section.exigence{margin-top:-38vw!important}
+}
+/* ===== iPhone (v4) : photo plein cadre derrière, texte posé dessus, dégradé sombre dense dans la moitié basse ===== */
+@media(max-width:899px){
+.warm .imm,.warm .imm:has(img),.warm .imm:has(img[src*="place-de-la-nation"]),.warm .imm:has(img[src*="sultane-de-saba-rituels"]){
+ display:flex!important;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;
+ min-height:150vw!important;max-height:none;padding:0!important;background:#201812}
+.warm .imm .imm-bg{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-height:none!important;overflow:hidden}
+.warm .imm .imm-bg img,.warm .imm .imm-bg .photo{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover;-webkit-mask-image:none!important;mask-image:none!important}
+.warm .imm .imm-bg::after{display:none!important}
+/* haut : fondu doux avec la section précédente */
+.warm .imm::before{content:""!important;display:block!important;position:absolute;left:0;right:0;top:0;height:14%;z-index:1;background:linear-gradient(to bottom,#201812,rgba(32,24,18,0));pointer-events:none}
+/* bas : dégradé dense, la photo reste visible au-dessus, le texte repose sur du sombre */
+.warm .imm::after,.warm .imm.l::after,.warm .imm.r::after{content:""!important;display:block!important;position:absolute!important;left:0;right:0;bottom:0;top:auto;height:68%;z-index:1;
+ background:linear-gradient(to bottom,rgba(32,24,18,0) 0,rgba(32,24,18,.55) 26%,rgba(32,24,18,.86) 48%,rgba(32,24,18,.95) 70%,#201812 100%)!important;pointer-events:none}
+.warm .imm .wrap{position:relative;z-index:2;margin:0!important;padding:0 24px 34px!important;width:100%}
+.warm .imm .imm-txt{padding:0!important;max-width:none;background:none}
+.warm .imm .imm-txt h2{color:#f4ecdc;text-shadow:0 2px 16px rgba(0,0,0,.55)!important}
+.warm .imm .imm-txt h2 em,.warm .imm .imm-txt p.eyebrow{color:#e8c77a}
+.warm .imm .imm-txt p{color:#f1e8d6;text-shadow:0 1px 12px rgba(0,0,0,.6)!important}
+.warm .imm .imm-txt p.eyebrow{text-shadow:0 1px 10px rgba(0,0,0,.7)!important}
+.warm .imm .imm-txt p.price{color:#fff}
+.warm .imm .imm-logo{top:max(24px,env(safe-area-inset-top));left:24px;z-index:3}
+/* cadrage : sujet vers le haut pour rester au-dessus du texte */
+.warm .imm .imm-bg img{object-position:50% 16%!important}
+.warm .imm .imm-bg img[src*="sophie-epilation-laser"]{object-position:50% 6%!important}
+.warm .imm .imm-bg img[src*="cabine-massage-soins"]{object-position:50% 22%!important}
+.warm .imm .imm-bg img[src*="jacuzzi-bulles"]{object-position:30% 30%!important}
+.warm .imm .imm-bg img[src*="sultane-de-saba-rituels"]{object-position:50% 30%!important}
+.warm .imm .imm-bg img[src*="place-de-la-nation"]{object-position:50% 30%!important}
+.warm .imm:has(img[src*="place-de-la-nation"]),.warm .imm:has(img[src*="sultane-de-saba-rituels"]){min-height:138vw!important}
+}
+
+/* ===== iPhone — À propos : le portrait est l'arrière-plan de « Notre engagement », texte posé dessus ===== */
+@media(max-width:899px){
+.warm .hsplit:has(+ section.exigence) .hpic{display:none!important}
+.warm .hsplit + section.exigence{
+ margin:0!important;position:relative;
+ padding:84vw 0 44px!important;
+ background:
+  linear-gradient(to bottom,#201812 0,rgba(32,24,18,0) 16vw,rgba(32,24,18,0) 52vw,rgba(32,24,18,.55) 70vw,rgba(32,24,18,.88) 90vw,#201812 112vw,#201812 130vw) top center/100% 130vw no-repeat,
+  url(/assets/img/sophie-b-portrait-institut-paris-12-896.webp) top center/100% auto no-repeat,
+  #201812!important}
+.warm .hsplit + section.exigence::before,.warm .hsplit + section.exigence::after{display:none!important}
+.warm .hsplit + section.exigence .story h2{color:#f4ecdc;text-shadow:0 2px 16px rgba(0,0,0,.6)}
+.warm .hsplit + section.exigence .story h2 em,.warm .hsplit + section.exigence .story .eyebrow{color:#e8c77a}
+.warm .hsplit + section.exigence .story p{color:#f1e8d6;text-shadow:0 1px 12px rgba(0,0,0,.65)}
+.warm .hsplit + section.exigence .story .eyebrow{text-shadow:0 1px 10px rgba(0,0,0,.7)}
+.warm .hsplit .htxt{padding-bottom:28px}
+}
+/* ===== iPhone — À propos (v2) : le portrait est l'arrière-plan du bloc « À propos de Sophie B » ===== */
+@media(max-width:899px){
+/* « Notre engagement » redevient une section normale, sans photo */
+.warm .hsplit + section.exigence{background:#201812!important;padding:36px 0 44px!important;margin:0!important}
+.warm .hsplit + section.exigence .story h2{color:var(--ink);text-shadow:none}
+.warm .hsplit + section.exigence .story h2 em,.warm .hsplit + section.exigence .story .eyebrow{color:var(--gold);text-shadow:none}
+.warm .hsplit + section.exigence .story p{color:var(--soft);text-shadow:none}
+/* le bloc d'ouverture porte la photo */
+.warm .hsplit:has(+ section.exigence){
+ background:
+  linear-gradient(to bottom,#201812 0,rgba(32,24,18,0) 14vw,rgba(32,24,18,0) 50vw,rgba(32,24,18,.55) 68vw,rgba(32,24,18,.88) 88vw,#201812 108vw,#201812 130vw) top center/100% 130vw no-repeat,
+  url(/assets/img/sophie-b-portrait-institut-paris-12-896.webp) top center/100% auto no-repeat,
+  #201812!important}
+.warm .hsplit:has(+ section.exigence) .htxt{padding:80vw 24px 28px!important;background:none}
+.warm .hsplit:has(+ section.exigence) .htxt h1{color:#f4ecdc;text-shadow:0 2px 16px rgba(0,0,0,.6)}
+.warm .hsplit:has(+ section.exigence) .htxt h1 em{color:#e8c77a}
+.warm .hsplit:has(+ section.exigence) .htxt .eyebrow{color:#e8c77a;text-shadow:0 1px 10px rgba(0,0,0,.7)}
+.warm .hsplit:has(+ section.exigence) .htxt .hsub{color:#f4ecdc;text-shadow:0 1px 12px rgba(0,0,0,.6)}
+.warm .hsplit:has(+ section.exigence) .htxt p{color:#f1e8d6;text-shadow:0 1px 12px rgba(0,0,0,.65)}
+}
+/* iPhone : façade — l'enseigne reste dans la partie haute, le texte repose plus bas sur le sombre */
+@media(max-width:899px){
+.warm .imm:has(img[src*="facade-institut"]){min-height:178vw!important}
+.warm .imm .imm-bg img[src*="facade-institut"]{object-position:62% 0!important}
+.warm .imm:has(img[src*="facade-institut"])::after{height:64%!important;background:linear-gradient(to bottom,rgba(32,24,18,0) 0,rgba(32,24,18,.6) 24%,rgba(32,24,18,.9) 46%,#201812 78%)!important}
+}
+@media(max-width:899px){.warm .imm:has(img[src*="facade-institut"]){min-height:212vw!important}.warm .imm .imm-bg img[src*="facade-institut"]{object-position:60% 0!important}}
+
+/* ===== partenaires : 4 emplacements, les logos apparaissent et se remplacent en fondu ===== */
+.partner-rot{display:grid;grid-template-columns:repeat(4,1fr);gap:0 20px;max-width:980px;margin:0 auto}
+.partner-rot .slot{position:relative;height:96px}
+.partner-rot .slot a{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity 1s ease,visibility 0s linear 1s;padding:0 6%}
+.partner-rot .slot a.on{opacity:1;visibility:visible;transition:opacity 1s ease,visibility 0s}
+.partner-rot .slot img{width:100%;height:100%;max-height:100%;object-fit:contain;filter:brightness(0) invert(1);opacity:.94}
+.partner-rot .slot img[src*="keros"],.partner-rot .slot img[src*="talika"],.partner-rot .slot img[src*="nuxe"],.partner-rot .slot img[src*="bioderma"],.partner-rot .slot img[src*="planity"],.partner-rot .slot img[src*="i-motion"]{padding:18px 0}
+.partner-rot .slot img[src*="orlane"],.partner-rot .slot img[src*="sultane"],.partner-rot .slot img[src*="filorga"],.partner-rot .slot img[src*="avene"],.partner-rot .slot img[src*="uriage"],.partner-rot .slot img[src*="alphaline"]{padding:12px 0}
+@media(max-width:700px){.partner-rot{grid-template-columns:repeat(2,1fr);gap:6px 14px;max-width:340px}.partner-rot .slot{height:78px}}
+@media(prefers-reduced-motion:reduce){.partner-rot .slot a{transition:none!important}}
+
+/* fond plus profond et photos légèrement atténuées : moins de halos clairs */
+html,body,.warm{background:#201812}
+.warm .imm .imm-bg img,.warm .hsplit .hpic .photo,.warm .hero-img{filter:none}
+.warm .footer,.ftr{background:#1a130e}
+
+/* À propos — « Une maison pensée comme une expérience » : photo du massage en décor, texte posé dessus */
+@media(min-width:900px){
+.imm:has(img[src*="sophie-massage-dos"]){min-height:min(98vh,960px)}
+.imm-bg img[src*="sophie-massage-dos"]{width:64%;left:auto;right:0;height:100%;object-fit:cover;object-position:50% 24%;
+ -webkit-mask-image:linear-gradient(to right,transparent 0,rgba(0,0,0,.5) 18%,#000 40%,#000 100%),linear-gradient(to bottom,transparent 0,#000 10%,#000 90%,transparent 100%);-webkit-mask-composite:source-in;
+ mask-image:linear-gradient(to right,transparent 0,rgba(0,0,0,.5) 18%,#000 40%,#000 100%),linear-gradient(to bottom,transparent 0,#000 10%,#000 90%,transparent 100%);mask-composite:intersect}
+.imm:has(img[src*="sophie-massage-dos"])::after{background:linear-gradient(90deg,#201812 0,#201812 32%,rgba(32,24,18,0) 50%)!important}
+.imm:has(img[src*="sophie-massage-dos"]) .imm-txt{max-width:540px}
+.imm:has(img[src*="sophie-massage-dos"]) .imm-txt p{max-width:none}
+}
+@media(max-width:899px){
+.warm .imm:has(img[src*="sophie-massage-dos"]){min-height:236vw!important}
+.warm .imm .imm-bg img[src*="sophie-massage-dos"]{object-position:50% 6%!important}
+}
+.imm-txt .brand-logo{filter:brightness(0) invert(1);opacity:.92;max-width:150px;height:auto}
+.imm-txt .brand-row{gap:26px;align-items:center;margin-top:18px!important}
+
+/* massage : photo à gauche, texte à droite */
+@media(min-width:900px){
+.imm.r .imm-bg img[src*="sophie-massage-dos"]{left:0;right:auto;object-position:50% 24%;
+ -webkit-mask-image:linear-gradient(to left,transparent 0,rgba(0,0,0,.5) 18%,#000 40%,#000 100%),linear-gradient(to bottom,transparent 0,#000 10%,#000 90%,transparent 100%);-webkit-mask-composite:source-in;
+ mask-image:linear-gradient(to left,transparent 0,rgba(0,0,0,.5) 18%,#000 40%,#000 100%),linear-gradient(to bottom,transparent 0,#000 10%,#000 90%,transparent 100%);mask-composite:intersect}
+.imm.r:has(img[src*="sophie-massage-dos"])::after{background:linear-gradient(270deg,#201812 0,#201812 32%,rgba(32,24,18,0) 50%)!important}
+.imm.r:has(img[src*="sophie-massage-dos"]) .imm-txt{margin-left:auto;max-width:540px}
+.imm.r:has(img[src*="sophie-massage-dos"]) .brand-row{justify-content:flex-start}
+}
+/* ===== iPhone (v5) : règle unique — la photo garde sa proportion, le texte démarre dans son tiers bas ===== */
+@media(max-width:899px){
+/* photos portrait (4:5) : laser, cabine, massage */
+.warm section.imm.imm{--ph:125vw;--start:80vw;display:block!important;position:relative;overflow:visible;min-height:0!important;max-height:none!important;padding:var(--start) 0 0!important;background:#201812}
+.warm section.imm.imm:has(img[src*="jacuzzi-bulles"]),
+.warm section.imm.imm:has(img[src*="jacuzzi-privatif-ambiance"]),
+.warm section.imm.imm:has(img[src*="sultane-de-saba-rituels"]),
+.warm section.imm.imm:has(img[src*="place-de-la-nation"]),
+.warm section.imm.imm:has(img[src*="facade-institut"]){--ph:104vw;--start:60vw}
+.warm section.imm.imm .imm-bg{position:absolute!important;top:0!important;left:0!important;right:0!important;bottom:auto!important;inset:0 0 auto 0!important;width:100%!important;height:var(--ph)!important;max-height:none!important;overflow:hidden}
+.warm section.imm.imm .imm-bg img,.warm section.imm.imm .imm-bg .photo{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover;-webkit-mask-image:none!important;mask-image:none!important;object-position:50% 20%!important}
+.warm section.imm.imm .imm-bg::after{display:none!important}
+.warm section.imm.imm::before{display:none!important;content:none!important}
+/* dégradé : photo nette en haut, fondu dense vers le fond sous le titre */
+.warm section.imm.imm::after,.warm section.imm.imm.l::after,.warm section.imm.imm.r::after{content:""!important;display:block!important;position:absolute!important;top:0!important;bottom:auto!important;left:0;right:0;height:var(--ph)!important;z-index:1;pointer-events:none;
+ background:linear-gradient(to bottom,rgba(32,24,18,.0) 0,rgba(32,24,18,0) calc(var(--start) - 22vw),rgba(32,24,18,.5) calc(var(--start) - 4vw),rgba(32,24,18,.86) calc(var(--start) + 14vw),#201812 calc(var(--ph) - 2vw))!important}
+.warm section.imm.imm .wrap{position:relative;z-index:2;margin:0!important;padding:0 24px 38px!important;width:100%}
+.warm section.imm.imm .imm-txt{padding:0!important;max-width:none;background:none}
+/* cadrage par photo */
+.warm section.imm.imm .imm-bg img[src*="sophie-epilation-laser"]{object-position:50% 8%!important}
+.warm section.imm.imm .imm-bg img[src*="cabine-massage-soins"]{object-position:50% 24%!important}
+.warm section.imm.imm .imm-bg img[src*="sophie-massage-dos"]{object-position:50% 10%!important}
+.warm section.imm.imm .imm-bg img[src*="jacuzzi-bulles"]{object-position:28% 40%!important}
+.warm section.imm.imm .imm-bg img[src*="jacuzzi-privatif-ambiance"]{object-position:40% 40%!important}
+.warm section.imm.imm .imm-bg img[src*="sultane-de-saba-rituels"]{object-position:50% 40%!important}
+.warm section.imm.imm .imm-bg img[src*="place-de-la-nation"]{object-position:50% 30%!important}
+.warm section.imm.imm .imm-bg img[src*="facade-institut"]{object-position:60% 6%!important}
+.warm section.imm.imm .imm-logo{top:max(24px,env(safe-area-inset-top))!important;left:24px;z-index:3}
+}
+/* iPhone : façade entière (enseigne complète), cadrage paysage plus large, texte dessous */
+@media(max-width:899px){
+.warm section.imm.imm:has(img[src*="facade-institut"]){--ph:76vw;--start:76vw;background:#201812}
+.warm section.imm.imm .imm-bg img[src*="facade-institut"]{object-fit:cover!important;object-position:46% 50%!important;transform:scale(1);transform-origin:50% 50%}
+.warm section.imm.imm:has(img[src*="facade-institut"])::after{height:var(--ph)!important;background:linear-gradient(to bottom,rgba(32,24,18,0) 0,rgba(32,24,18,0) 62%,rgba(32,24,18,.7) 84%,#201812 100%)!important}
+.warm section.imm.imm:has(img[src*="facade-institut"]) .wrap{padding-top:6px!important}
+}
+/* ===== transitions en fondu entre sections (statiques, sans mouvement) ===== */
+@media(max-width:899px){
+/* haut de chaque photo : fondu du fond vers l'image, plus généreux */
+.warm section.imm.imm::before{content:""!important;display:block!important;position:absolute;left:0;right:0;top:0;height:30vw;z-index:2;pointer-events:none;
+ background:linear-gradient(to bottom,#201812 0,rgba(32,24,18,.82) 22%,rgba(32,24,18,.5) 50%,rgba(32,24,18,.18) 78%,rgba(32,24,18,0) 100%)}
+/* la façade : fondu aussi sur le haut */
+.warm section.imm.imm:has(img[src*="facade-institut"])::before{height:24vw}
+/* fin du bloc À propos : le portrait s'éteint, la section suivante démarre sur le fond uni */
+.warm .hsplit + section.exigence{position:relative}
+}
+@media(min-width:900px){
+/* ordinateur : même principe, bords haut et bas de chaque photo en décor */
+.imm::before{content:"";position:absolute;left:0;right:0;top:0;height:120px;z-index:2;pointer-events:none;background:linear-gradient(to bottom,#201812 0,rgba(32,24,18,.7) 40%,rgba(32,24,18,0) 100%)}
+.imm .imm-bg::after{content:"";position:absolute;left:0;right:0;bottom:0;height:140px;z-index:2;pointer-events:none;background:linear-gradient(to top,#201812 0,rgba(32,24,18,.7) 40%,rgba(32,24,18,0) 100%)}
+}
+/* petits titres dorés : plus gros, en gras, adaptés à la taille d'écran */
+.eyebrow{font-size:clamp(.86rem,.8rem + .3vw,1.05rem)!important;font-weight:600!important;letter-spacing:.24em!important;line-height:1.5;color:var(--gold)}
+.warm .eyebrow{color:#d9b24f}
+.eyebrow::before{width:clamp(30px,4vw,44px);border-top-width:2px}
+.story .eyebrow,.intro .eyebrow{justify-content:center}
+@media(max-width:899px){
+.eyebrow{font-size:.9rem!important;letter-spacing:.2em!important;margin-bottom:1.1rem}
+.warm .imm .imm-txt p.eyebrow{font-size:.9rem!important;font-weight:600!important;color:#e8c77a}
+}
+@media(min-width:1400px){.eyebrow{font-size:1.02rem!important}}
+
+/* titre de la section « Une signature » */
+.story.sign .sign-title{font-size:clamp(2.1rem,4.4vw,3.5rem);line-height:1.12;margin:.15em auto .7em;max-width:18ch}
+.story.sign .sign-title em{color:var(--gold)}
+.warm .story.sign .sign-title em{color:#e8c77a}
+/* petits titres dorés : plus discrets (graisse moyenne, taille mesurée) */
+.eyebrow{font-size:clamp(.78rem,.74rem + .2vw,.92rem)!important;font-weight:500!important;letter-spacing:.26em!important}
+.warm .eyebrow{color:#cfaa4e}
+.eyebrow::before{border-top-width:1px}
+@media(max-width:899px){
+.eyebrow{font-size:.8rem!important;letter-spacing:.22em!important;font-weight:500!important}
+.warm .imm .imm-txt p.eyebrow{font-size:.8rem!important;font-weight:500!important;color:#e0bf6c}
+}
+@media(min-width:1400px){.eyebrow{font-size:.9rem!important}}
+/* ordinateur : les photos portrait gardent leur proportion 4:5, entières, quelle que soit la largeur d'écran */
+@media(min-width:900px){
+.imm-bg img[src*="sophie-massage-dos"],.imm.r .imm-bg img[src*="sophie-massage-dos"],
+.imm-bg img[src*="sophie-epilation-laser"],.imm-bg img[src*="cabine-massage-soins"]{
+ width:auto!important;height:100%!important;max-width:none;aspect-ratio:4/5;object-fit:cover}
+.imm.r .imm-bg img[src*="sophie-massage-dos"]{left:max(0px,calc((100vw - 1440px)/2));right:auto}
+.imm-bg img[src*="sophie-epilation-laser"]{right:max(0px,calc((100vw - 1440px)/2));left:auto}
+.imm-bg img[src*="cabine-massage-soins"]{left:max(0px,calc((100vw - 1440px)/2));right:auto}
+}
+@media(min-width:900px){
+.imm.r .imm-bg img[src*="sophie-massage-dos"]{
+ -webkit-mask-image:linear-gradient(to left,transparent 0,rgba(0,0,0,.5) 18%,#000 40%,#000 100%),linear-gradient(to right,transparent 0,#000 14%,#000 100%),linear-gradient(to bottom,transparent 0,#000 10%,#000 90%,transparent 100%);-webkit-mask-composite:source-in,source-in;
+ mask-image:linear-gradient(to left,transparent 0,rgba(0,0,0,.5) 18%,#000 40%,#000 100%),linear-gradient(to right,transparent 0,#000 14%,#000 100%),linear-gradient(to bottom,transparent 0,#000 10%,#000 90%,transparent 100%);mask-composite:intersect,intersect}
+.imm-bg img[src*="sophie-epilation-laser"]{
+ -webkit-mask-image:linear-gradient(to right,transparent 0,rgba(0,0,0,.5) 18%,#000 40%,#000 100%),linear-gradient(to left,transparent 0,#000 14%,#000 100%),linear-gradient(to bottom,transparent 0,#000 10%,#000 90%,transparent 100%);-webkit-mask-composite:source-in,source-in;
+ mask-image:linear-gradient(to right,transparent 0,rgba(0,0,0,.5) 18%,#000 40%,#000 100%),linear-gradient(to left,transparent 0,#000 14%,#000 100%),linear-gradient(to bottom,transparent 0,#000 10%,#000 90%,transparent 100%);mask-composite:intersect,intersect}
+.imm-bg img[src*="cabine-massage-soins"]{
+ -webkit-mask-image:linear-gradient(to left,transparent 0,rgba(0,0,0,.5) 18%,#000 40%,#000 100%),linear-gradient(to right,transparent 0,#000 14%,#000 100%),linear-gradient(to bottom,transparent 0,#000 10%,#000 90%,transparent 100%);-webkit-mask-composite:source-in,source-in;
+ mask-image:linear-gradient(to left,transparent 0,rgba(0,0,0,.5) 18%,#000 40%,#000 100%),linear-gradient(to right,transparent 0,#000 14%,#000 100%),linear-gradient(to bottom,transparent 0,#000 10%,#000 90%,transparent 100%);mask-composite:intersect,intersect}
+}
+
+/* ===== menu déroulant (Soins visage) ===== */
+.nav .has-sub{position:relative;display:flex;align-items:center}
+.nav .has-sub>a::after{content:"";display:inline-block;width:5px;height:5px;margin-left:8px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:translateY(-2px) rotate(45deg);opacity:.7}
+.nav .sub{position:absolute;left:-18px;top:100%;padding-top:22px;min-width:240px;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .28s ease,transform .28s ease,visibility 0s linear .28s;z-index:120}
+.nav .sub ul{list-style:none;margin:0;padding:10px 0;background:rgba(32,24,18,.98);border:1px solid rgba(207,170,78,.45);box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.nav .sub a{display:block;padding:12px 24px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#efe6d3;white-space:nowrap;border:0}
+.nav .sub a:hover,.nav .sub a[aria-current]{color:#e8c77a;background:rgba(207,170,78,.09)}
+.nav .has-sub:hover .sub,.nav .has-sub:focus-within .sub{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.mmenu a.msub{font-size:1.25rem;padding:6px 0 6px 22px;min-height:44px;color:var(--soft)}
+@media(prefers-reduced-motion:reduce){.nav .sub{transition:none}}
+
+/* pages Soins visage : cartes de navigation et en-tête compact */
+a.vlink{display:block;text-decoration:none;color:inherit;transition:border-color .3s,background .3s}
+a.vlink:hover{border-top-color:#e8c77a;background:rgba(207,170,78,.05)}
+a.vlink h3{font:400 1.7rem var(--serif);text-transform:none;letter-spacing:0;margin:.2em 0 .4em}
+.vhub .eyebrow{margin-bottom:.6rem}
+.sub-hero{padding-top:clamp(40px,5vw,72px)}
+.sub-hero .intro h1{font-size:clamp(2rem,4vw,3.2rem);max-width:22ch;margin-left:auto;margin-right:auto}
+.sub-hero .intro h1 em{color:var(--gold)}
+.sub-logo{width:200px;height:auto;margin:0 auto 22px;filter:brightness(0) invert(1)}
+.steps.small{margin:18px 0}
+.steps.small li{font-size:.95rem}
+.sub-hero .intro{text-align:center;margin:0 auto}
+.sub-hero .intro p{margin-left:auto;margin-right:auto;text-align:center;max-width:56ch}
+.sub-hero .intro .eyebrow{justify-content:center}
+.sub-hero{padding-bottom:clamp(28px,4vw,56px)}

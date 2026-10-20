@@ -1,0 +1,6 @@
+MAQUETTE SOPHIE B — hors ligne
+
+Chaque page est un fichier unique : le design, les polices et les photos sont à l'intérieur.
+Ouvrir « index.html » dans un navigateur. Garder les trois fichiers dans le même dossier pour que les liens entre pages fonctionnent.
+Pages : index.html (accueil), a-propos.html, nos-partenaires.html.
+Les autres liens du menu sont inactifs pour l'instant.
